@@ -10,6 +10,7 @@ assets/js/config.js     telefon, adres, WhatsApp, fark hesabı rakamları  ← �
 assets/js/main.js       önce/sonra kaydırıcısı, fark hesabı, form
 assets/fonts/           Archivo (OFL lisanslı, siteyle birlikte barındırılıyor)
 DESIGN.md               tasarım sistemi ve yasak listesi
+HERO-GORSEL.md          hero görselini/videosunu üretme talimatı
 NOTLAR.md               "AI slop" videosundan çıkarılan notlar
 ```
 
@@ -36,4 +37,5 @@ Birkaç dakika sonra site `https://<kullanıcı>.github.io/build_dream_home/` ad
 - [ ] Sözleri kontrol edin: "aynı gün ararız", "statik inceleme yaptırırız",
       "tek sorumlu" gibi cümleler ofisin gerçekten tuttuğu sözler olmalı
 - [ ] Keşif sonrası verilen yazılı hesapta ev sahibinin payı ve ödeme zamanı (önden ödeme dahil) açıkça yazmalı; sitedeki "yazılı olarak önünüze koyarız" sözü buna dayanıyor
+- [ ] Hero görseli: gerçek bir proje fotoğrafı ya da `HERO-GORSEL.md`'deki talimatla üretilmiş görsel
 - [ ] Gerçek projelerin önce/sonra fotoğrafları gelince bir proje bölümü ekleyin

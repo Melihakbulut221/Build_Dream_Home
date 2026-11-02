@@ -14,6 +14,15 @@ window.SITE = {
   calismaSaatleri: "Pazartesi–Cumartesi, 08.30–18.30",
 
   /*
+   * Hero görseli. Boş bırakılırsa sayfadaki altın çizgili ev çizimi görünür.
+   * Gerçek bir proje fotoğrafı ya da üretilmiş görsel eklemek için dosyayı
+   * assets/img/ altına koyup yolunu yazın. Video verilirse görsel, video
+   * yüklenene kadar kapak olarak kullanılır. (Nasıl üretilir: HERO-GORSEL.md)
+   */
+  heroGorsel: "",   // örnek: "assets/img/hero.jpg"
+  heroVideo: "",    // örnek: "assets/img/hero.mp4"
+
+  /*
    * Fark hesabı varsayımları.
    *
    * m2Fiyat: ilçedeki ortalama satılık konut m² fiyatı (TL). Yenilenmiş evin

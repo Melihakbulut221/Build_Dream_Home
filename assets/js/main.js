@@ -17,6 +17,47 @@
   var tarih = document.querySelector("[data-tarih]");
   if (tarih) tarih.textContent = S.verininTarihi;
 
+  /* ---------- Hero görseli: config'te verilirse çizimin yerini alır ---------- */
+  var media = document.querySelector("[data-hero-media]");
+  if (media && (S.heroVideo || S.heroGorsel)) {
+    var art = media.querySelector(".hero__art");
+    if (S.heroVideo && !reduceMotion) {
+      var v = document.createElement("video");
+      v.muted = true; v.loop = true; v.playsInline = true; v.autoplay = true;
+      v.setAttribute("aria-hidden", "true");
+      if (S.heroGorsel) v.poster = S.heroGorsel;
+      v.src = S.heroVideo;
+      v.addEventListener("loadeddata", function () { if (art) art.remove(); });
+      media.appendChild(v);
+    } else if (S.heroGorsel) {
+      var img = new Image();
+      img.alt = "";
+      img.onload = function () { if (art) art.remove(); media.appendChild(img); };
+      img.src = S.heroGorsel;
+    }
+  }
+
+  /* ---------- Menü ---------- */
+  var menu = document.getElementById("menu");
+  var menuBtn = document.querySelector("[data-menu-open]");
+  if (menu && menuBtn) {
+    var kapat = function (odak) {
+      menu.hidden = true;
+      document.body.classList.remove("menu-acik");
+      menuBtn.setAttribute("aria-expanded", "false");
+      if (odak) menuBtn.focus();
+    };
+    menuBtn.addEventListener("click", function () {
+      menu.hidden = false;
+      document.body.classList.add("menu-acik");
+      menuBtn.setAttribute("aria-expanded", "true");
+      menu.querySelector("a").focus();
+    });
+    menu.querySelector("[data-menu-close]").addEventListener("click", function () { kapat(true); });
+    menu.querySelectorAll(".menu__nav a").forEach(function (a) { a.addEventListener("click", function () { kapat(false); }); });
+    document.addEventListener("keydown", function (e) { if (e.key === "Escape" && !menu.hidden) kapat(true); });
+  }
+
   /* ---------- Önce/sonra karşılaştırması ---------- */
   var compare = document.querySelector("[data-compare]");
   if (compare) {
@@ -30,6 +71,8 @@
     var fitView = function () {
       var vb = narrow.matches ? "270 95 660 500" : "0 0 1200 640";
       svgs.forEach(function (s) { s.setAttribute("viewBox", vb); });
+      var heroArt = document.querySelector(".hero__art");
+      if (heroArt) heroArt.setAttribute("viewBox", narrow.matches ? "600 40 640 1090" : "0 0 1200 760");
     };
     fitView();
     if (narrow.addEventListener) narrow.addEventListener("change", fitView);

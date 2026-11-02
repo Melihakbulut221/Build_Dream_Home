@@ -12,68 +12,74 @@ değil, Konya'da iki katlı ev yenileyen bu ofisin sitesi gibi görünsün.
 - **İnandırması gereken tek şey:** bu ofis, evin yenilenip yenilenmemesi gerektiğini
   rakamla ve dürüstçe söyler.
 
-## Renkler (Konya'dan)
+## Görsel dil
 
-| Ad | Hex | Nereden | Ne için |
-|---|---|---|---|
-| Kireç | `#F3F5F2` | Kireç badana, serin beyaz | Sayfa zemini |
-| Lacivert | `#16294D` | Karatay Medresesi çinisinin koyu mavisi | Metin, çizgiler, koyu bölümler |
-| Firuze | `#0E8A80` | Selçuklu çinisinin turkuazı | "Yenilenmiş" hal, kazanç, eylem düğmesi |
-| Sille taşı | `#B88D6C` | Sille'nin pembe-kahve andezit taşı | "Bugünkü" hal, eski ev |
-| Harç | `#8C95A3` | Çimento harcı grisi | İkincil metin, kılavuz çizgileri |
-| Kiremit | `#A8442E` | Eski Konya çatı kiremidi | Yalnızca negatif fark ve hata mesajı |
+Referans: Luke Carter'ın videosundaki "ATELIER" sitesi (https://youtu.be/uPIIJDmq5OU):
+koyu ve sıcak zemin, sinematik hero, ince ve italik serif başlık, pirinç rengi ince
+çerçeve, yanda dikey menü, yuvarlak monogram mühür. Bu dili Konya'daki bir yenileme
+ofisine uyarladık; içerik (fark hesabı, dürüst metin) aynen kaldı.
 
-Kurallar:
-- Firuze = iyiye giden şey. Sille = bugünkü/eski hal. Bu anlamı her yerde koruyun.
-- Kiremit dekor değildir; sadece "zarar / hata" anlamında kullanılır.
-- Gradyan yok. Düz renk ve çizgi.
+## Renkler
+
+| Ad | Hex | Ne için |
+|---|---|---|
+| Is | `#14120F` | Sayfa zemini (ocak isi gibi sıcak siyah) |
+| Kül | `#1C1915` | Dönüşümlü bölüm zemini |
+| Pirinç | `#C9A86A` | Çerçeve, çizgi, etiket, eylem düğmesi |
+| Kireç | `#EDE6D9` | Metin |
+| Duman | `#A69D8F` | İkincil metin |
+| Firuze | `#5BB8AC` | Yalnızca kazanç (fark hesabında pozitif sonuç) |
+| Kiremit | `#D98A72` | Yalnızca zarar ve hata mesajı |
+| Kâğıt | `#EAE3D6` | Önce/sonra çiziminin zemini (çerçeveli baskı gibi) |
+
+- Pirinç dekor için değil yapı için: çerçeve, ayırıcı çizgi, etiket.
+- Firuze ve kiremit anlam taşır; başka yerde kullanılmaz.
+- Çizgiler `rgba(201,168,106,.28)` inceliğinde, 1px.
 
 ## Yazı
 
-Tek aile: **Archivo** (değişken, `wght` 100–900, `wdth` 62–125), siteyle birlikte
-`assets/fonts/` altında barındırılıyor. Lisans OFL 1.1, ticari kullanım serbest.
-Kişiliği genişlik ekseni veriyor: başlıklar inşaat panosu gibi dar ve ağır, metin normal
-genişlikte.
+İki aile, ikisi de siteyle birlikte `assets/fonts/` altında, OFL lisanslı:
 
-| Rol | wdth | wght | Boyut |
-|---|---|---|---|
-| Büyük başlık (h1) | 62 | 800 | clamp(2.75rem, 8vw, 6.25rem), satır aralığı 0.92 |
-| Bölüm başlığı (h2) | 68 | 750 | clamp(2rem, 4.6vw, 3.5rem) |
-| Ara başlık (h3) | 85 | 650 | 1.25rem |
-| Metin | 100 | 400 | 1.0625rem, satır aralığı 1.55, satır ≤ 68 karakter |
-| Büyük rakam | 62 | 700 | `font-variant-numeric: tabular-nums` |
-| Küçük not | 100 | 450 | 0.875rem, harç rengi |
+- **Cormorant Garamond** (serif): başlıklar italik 300; ara başlıklar ve rakamlar normal 400/500.
+- **Archivo** (sans): metin; gezinme ve küçük etiketler geniş (`font-stretch: 115%`),
+  büyük harf, harf aralığı `.2em`.
 
-- Başlıklar cümle düzeninde. Etiketler BÜYÜK HARF değil.
-- Başlıkta tek kelimeyi renklendirme / italik yapma yok.
+| Rol | Yazı | Boyut |
+|---|---|---|
+| Hero başlığı | Cormorant italik 300 | clamp(3rem, 7.4vw, 7rem), satır aralığı .98 |
+| Bölüm başlığı | Cormorant italik 300 | clamp(2.5rem, 5.4vw, 4.5rem) |
+| Ara başlık | Cormorant 500 | 1.625rem |
+| Giriş paragrafı | Cormorant 400 | clamp(1.75rem, 3.2vw, 2.75rem) |
+| Metin | Archivo 400 | 1.0625rem, satır aralığı 1.6 |
+| Etiket | Archivo geniş, büyük harf | .7–.78rem, harf aralığı .2em, pirinç |
+| Büyük rakam | Cormorant italik 300 | fark sonucu clamp(3.5rem, 8vw, 6.5rem) |
 
 ## Düzen
 
-- Sola hizalı. Ortalanmış blok yalnızca hiçbir yerde.
-- İçerik genişliği 1180px, kenar boşluğu en az 20px.
-- Köşe yuvarlaklığı hiyerarşiye göre: düğme 999px (hap), form alanı 6px, bölüm kutusu 0.
-- Gölge yok. Ayrım çizgiyle ve zemin rengiyle yapılır.
-- Kart ızgarası yok. Listeler gerçekten liste, adımlar gerçekten sıra.
-- Numara yalnızca gerçek sıralama varsa (süreç adımları).
+- Hero: sayfa kenarından 10–22px içeride, 1px pirinç çerçeveli, köşeleri yuvarlak bir
+  kart. Solda dikey gezinme şeridi, üstte aralıklı harflerle firma adı ve "Menü".
+- Hero görseli `config.js` → `heroGorsel` / `heroVideo` ile verilir; verilmezse altın
+  çizgili ev çizimi görünür (bkz. `HERO-GORSEL.md`).
+- İçerik sola hizalı, genişlik 1200px. Bölüm başlıkları solda, açıklama sağda.
+- Bölümler `Is` ve `Kül` zeminleri arasında dönüşümlü.
+- Gölge yok, gradyan yalnızca hero'daki ışıkta.
+- Süreç adımları gerçek bir sıra olduğu için Roma rakamıyla numaralı (I–V).
 
-## Akılda kalan tek şey
+## Hareket
 
-Sayfanın cesareti tek bir yere harcanıyor: **önce/sonra ev cephesi çizimi** (hero).
-Aynı iki katlı ev, solda bugünkü haliyle (soba borusu, dökülen sıva, tek cam), sağda
-yenilenmiş haliyle; arada kaydırıcı. Diğer her şey sakin.
-
-Hareket: yalnızca sayfa açılışında kaydırıcının bir kez kayması. `prefers-reduced-motion`
-açıksa o da yok. Kullanıcının yaptığı işe cevap veren hareketler (hesap makinesinin
-çubuğu) serbest.
+- Mühür yazısı 48 saniyede bir tur döner.
+- Önce/sonra kaydırıcısı sayfa açılışında bir kez kayar.
+- `prefers-reduced-motion` açıksa ikisi de durur, hero videosu da oynatılmaz.
 
 ## Bileşenler
 
-- **Eylem düğmesi:** firuze zemin, kireç yazı, hap şekli. Metni her yerde aynı:
-  "Keşif randevusu iste".
-- **İkincil bağlantı:** altı çizili lacivert metin. Yanına ok eklenmez.
-- **Fark hesabı:** girişler solda, sonuç sağda; sonuç yatay bir cetvel çubuğu
-  (sille = bugünkü değer, taralı lacivert = masraf, firuze = fark).
-- **Soru-cevap:** açılır-kapanır akordeon değil, düz liste. Okuyan her şeyi görsün.
+- **Eylem düğmesi:** pirinç zemin, koyu yazı, hap şekli, geniş büyük harf. Metni her
+  yerde aynı: "Keşif randevusu iste".
+- **Hero bağlantısı:** büyük harf, altında pirinç çizgi, sonunda ↗ (referanstaki gibi).
+- **Fark hesabı:** girişler solda; sonuç sağda büyük italik rakam, altında ince ölçü
+  çubuğu (sille = bugünkü değer, taralı pirinç = masraf, firuze = fark).
+- **Soru-cevap:** akordeon değil, hepsi açık.
+- **Form alanları:** yalnızca alt çizgi; odakta pirinç.
 
 ## Yazım kuralları
 
@@ -104,11 +110,13 @@ Bunlar her tadilat sitesinde var ve hiçbir şey söylemiyor:
 - Ortalanmış hero + üstte küçük etiket + iki düğme kalıbı
 - Her bölümde aşağıdan kayarak gelen animasyon
 - Stok "baret takmış gülümseyen usta" fotoğrafı
-- Başlıkların üstünde BÜYÜK HARF etiketler, bağlantıların sonunda "→"
+- Her başlığın üstünde etiket. Büyük harf etiket yalnızca gezinme, form ve fark
+  hesabında kullanılır.
 
 ## Gerçek içerik gelince
 
-- **Proje fotoğrafları:** aynı açıdan çekilmiş önce/sonra çiftleri. Hero'daki kaydırıcı
-  bileşeni fotoğrafla da çalışacak şekilde genişletilebilir.
+- **Proje fotoğrafları:** aynı açıdan çekilmiş önce/sonra çiftleri. Önce/sonra
+  kaydırıcısı fotoğrafla da çalışacak şekilde genişletilebilir. İyi bir yenilenmiş ev
+  fotoğrafı hero görseli olarak da kullanılabilir.
 - **Rakamlar:** `assets/js/config.js` içindeki ilçe m² fiyatları, durum katsayıları ve
   m² yenileme maliyetleri ofisin kendi rakamlarıyla güncellenmeli.

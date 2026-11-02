@@ -64,10 +64,32 @@ Kötü metin iyi tasarımı da batırır. Metni şu süzgeçten geçir:
 | Videodaki kural | Bu sitede |
 |---|---|
 | Tasarım sistemi ver | `DESIGN.md`: renkler, yazı, bileşenler, yasak listesi |
-| Kopyalama, kendi markanı kur | Renkler Konya'dan: Selçuklu çinisinin firuzesi ve laciverti, Sille taşı |
+| Kopyalama, kendi markanı kur | (İlk sürüm) Renkler Konya'dan; ikinci sürümde görsel dil ATELIER referansına geçti |
 | Varsayılan font kullanma | Tek aile: Archivo, genişlik ekseniyle (dar başlık, normal metin); siteyle birlikte barındırılıyor, OFL lisanslı |
 | Önce acıyı adlandır | Başlık: eski ev, olduğundan ucuza gidiyor |
 | Her ekranda tek istek | Tek eylem her yerde aynı adla: "Keşif randevusu iste" |
 | Somut dil | Hesap makinesi gerçek ilçe m² ortalamalarıyla çalışıyor; "fark çıkmazsa söyleriz" |
 | Görsel üretim | Stok fotoğraf yerine elle çizilmiş SVG ev cephesi, önce/sonra kaydırıcısı |
 | Sahte sosyal kanıt yok | Uydurma yorum, sayaç, "500+ mutlu müşteri" yok; gerçek projeler gelince eklenecek |
+
+---
+
+# İkinci video: "Stop Building AI Slop Websites"
+
+Kaynak: Luke Carter, https://youtu.be/uPIIJDmq5OU (açıklama, bölüm başlıkları ve
+video karelerinden çıkarıldı; transkripte ulaşılamadı).
+
+- Yapay zekâ sitelerinin hepsi aynı görünüyor çünkü tasarım kodla başlıyor. Bunun
+  yerine **önce görsel**: bir görüntü modeli (GPT Image 2) sanat yönetmeni olur,
+  hero görselini o üretir; kod (Codex) bu görsele sadık kalır.
+- İki prompt: (1) hero için referans görsel, (2) aynı sahnenin yazısız temiz arka plan
+  versiyonu.
+- "Fidelity pass": kodlanan sayfa görselle piksel piksel karşılaştırılır, özellikle mobilde.
+- Arka plan, Higgsfield üzerinden Seedance 2.0 ile hafifçe hareketlendirilir.
+- Bütün sayfalar için bir "art bible" (sanat kitabı) prompt'u: renk, ışık, yazı, ton.
+- Videodaki örnek site "ATELIER": koyu sıcak zemin, sinematik iç mekân fotoğrafı,
+  ince italik serif başlık ("Homes with a point of view"), aralıklı büyük harf
+  gezinme, dikey yan menü, yuvarlak monogram mühür, pirinç rengi ince çerçeve.
+
+Bu repoda: görsel dil bu siteye göre yeniden kuruldu (`DESIGN.md`), hero görseli
+üretme talimatı `HERO-GORSEL.md` içinde.

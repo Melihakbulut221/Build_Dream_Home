@@ -5,56 +5,140 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Kesit Yapı · Konya'da iki katlı ev yenileme</title>
   <meta name="description" content="Konya Selçuklu, Meram ve Karatay'da eski iki katlı evleri yeniliyoruz. Önce evin bugünkü ve yenilenmiş değerini hesaplıyoruz; fark masraftan büyükse başlıyoruz.">
-  <meta name="theme-color" content="#16294D">
+  <meta name="theme-color" content="#14120F">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="tr_TR">
   <meta property="og:title" content="Kesit Yapı · Konya'da iki katlı ev yenileme">
-  <meta property="og:description" content="Eski iki katlı eviniz olduğundan ucuz görünüyor. Yenilemenin kendini çıkarıp çıkarmadığını önce birlikte hesaplayalım.">
+  <meta property="og:description" content="Eski iki katlı eviniz olduğundan fazlasını eder. Yenilemenin kendini çıkarıp çıkarmadığını önce birlikte hesaplayalım.">
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/cormorant-garamond-latin-300-italic.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/archivo-latin-wdth-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="assets/fonts/archivo-latin-ext-wdth-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="assets/css/site.css">
 </head>
 <body>
   <a class="skip" href="#icerik">İçeriğe geç</a>
 
-  <header class="top">
-    <div class="wrap top__in">
-      <a class="brand" href="#" aria-label="Kesit Yapı, sayfa başı">
-        <svg class="brand__mark" viewBox="0 0 40 40" aria-hidden="true">
-          <path d="M4 17 L20 5 L36 17" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linejoin="round"/>
-          <rect x="8" y="17" width="24" height="19" fill="none" stroke="currentColor" stroke-width="3.4"/>
-          <line x1="8" y1="26.5" x2="32" y2="26.5" stroke="#0E8A80" stroke-width="3.4"/>
-        </svg>
-        <span class="brand__name">Kesit Yapı</span>
-      </a>
-      <nav class="nav" aria-label="Sayfa içi">
+  <!-- HERO: çerçeveli, sinematik kart -->
+  <div class="stage">
+    <div class="frame">
+      <header class="bar">
+        <a class="word" href="#" aria-label="Kesit Yapı, sayfa başı">Kesit Yapı</a>
+        <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu" data-menu-open>
+          <span>Menü</span><span class="burger" aria-hidden="true"></span>
+        </button>
+      </header>
+
+      <nav class="rail" aria-label="Bölümler">
+        <a href="#once-sonra">Önce ve sonra</a>
         <a href="#fark">Fark hesabı</a>
-        <a href="#surec">Nasıl çalışıyoruz</a>
-        <a href="#sorular">Sorular</a>
+        <a href="#surec">Süreç</a>
       </nav>
-      <a class="top__tel" data-tel href="tel:+903320000000">0 (332) 000 00 00</a>
+
+      <div class="hero">
+        <!-- Görsel yuvası: config.js'te heroGorsel / heroVideo verilirse burası fotoğraf/video olur.
+             Verilmezse aşağıdaki çizim gösterilir. -->
+        <div class="hero__media" data-hero-media>
+          <svg class="hero__art" viewBox="0 0 1200 760" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+            <defs>
+              <radialGradient id="gun" cx="72%" cy="80%" r="70%">
+                <stop offset="0" stop-color="#C9A86A" stop-opacity=".42"/>
+                <stop offset=".45" stop-color="#7A5A36" stop-opacity=".16"/>
+                <stop offset="1" stop-color="#14120F" stop-opacity="0"/>
+              </radialGradient>
+              <radialGradient id="pencere" cx="50%" cy="50%" r="50%">
+                <stop offset="0" stop-color="#F1C46B" stop-opacity=".5"/>
+                <stop offset="1" stop-color="#F1C46B" stop-opacity="0"/>
+              </radialGradient>
+            </defs>
+            <rect width="1200" height="760" fill="#14120F"/>
+            <rect width="1200" height="760" fill="url(#gun)"/>
+            <circle cx="1010" cy="660" r="54" fill="#E6C27F" opacity=".55"/>
+            <path d="M0 668 Q160 628 330 650 T690 638 Q860 618 1010 642 T1200 636 V760 H0 Z" fill="#1B1814"/>
+            <path d="M0 690 H1200" stroke="#C9A86A" stroke-opacity=".5" stroke-width="1.2"/>
+
+            <g transform="translate(372 166) scale(.9)" fill="none" stroke="#C9A86A" stroke-width="1.7" stroke-linejoin="round">
+              <circle cx="415" cy="315" r="90" fill="url(#pencere)" stroke="none"/>
+              <circle cx="625" cy="330" r="110" fill="url(#pencere)" stroke="none"/>
+              <circle cx="415" cy="492" r="90" fill="url(#pencere)" stroke="none"/>
+              <polygon points="300,232 420,130 780,130 900,232" fill="#17140F"/>
+              <path d="M391 155 H809 M361 180 H839 M332 205 H868" stroke-opacity=".45"/>
+              <rect x="325" y="236" width="550" height="344" fill="#17140F"/>
+              <path d="M325 440 H875 M325 468 H875 M325 496 H875 M325 524 H875 M325 552 H875" stroke-opacity=".22"/>
+              <rect x="321" y="400" width="558" height="12"/>
+              <rect x="370" y="268" width="90" height="94" fill="#F1C46B" fill-opacity=".72"/><path d="M415 268 V362"/>
+              <rect x="685" y="268" width="90" height="94"/><path d="M730 268 V362"/>
+              <rect x="592" y="262" width="66" height="138" fill="#F1C46B" fill-opacity=".6"/>
+              <rect x="555" y="396" width="210" height="16" fill="#17140F"/>
+              <rect x="560" y="354" width="200" height="42" fill="#C9A86A" fill-opacity=".08"/>
+              <rect x="370" y="446" width="90" height="92" fill="#F1C46B" fill-opacity=".72"/><path d="M415 446 V538"/>
+              <rect x="660" y="446" width="90" height="92"/><path d="M705 446 V538"/>
+              <rect x="778" y="452" width="56" height="54"/>
+              <rect x="522" y="454" width="116" height="8"/>
+              <rect x="545" y="468" width="70" height="112" fill="#17140F"/>
+              <path d="M562 474 V574 M580 474 V574 M598 474 V574" stroke-opacity=".5"/>
+              <rect x="881" y="239" width="9" height="339"/>
+              <rect x="40" y="542" width="460" height="38" fill="#17140F"/>
+              <rect x="660" y="542" width="420" height="38" fill="#17140F"/>
+              <path d="M1000 580 V480"/>
+              <circle cx="1000" cy="446" r="44" fill="#17140F"/><circle cx="968" cy="472" r="30"/><circle cx="1032" cy="468" r="30"/>
+            </g>
+          </svg>
+        </div>
+        <div class="hero__shade" aria-hidden="true"></div>
+
+        <div class="hero__copy">
+          <h1>Eviniz, olduğundan fazlasını eder.</h1>
+          <p>Konya'da eski iki katlı evleri yeniliyoruz. Önce hesap, sonra iş.</p>
+        </div>
+
+        <div class="seal" aria-hidden="true">
+          <svg viewBox="0 0 160 160">
+            <defs><path id="halka" d="M80 80 m-58 0 a58 58 0 1 1 116 0 a58 58 0 1 1 -116 0"/></defs>
+            <circle cx="80" cy="80" r="76" fill="none" stroke="#C9A86A" stroke-opacity=".6"/>
+            <circle cx="80" cy="80" r="40" fill="none" stroke="#C9A86A" stroke-opacity=".6"/>
+            <g class="seal__ring"><text><textPath href="#halka" textLength="356">İKİ KATLI EVLER · KONYA · KEŞİF ÜCRETSİZ ·</textPath></text></g>
+            <text class="seal__k" x="80" y="96" text-anchor="middle">K</text>
+          </svg>
+        </div>
+
+        <a class="hero__cta" href="#kesif">Keşif randevusu iste <span aria-hidden="true">↗</span></a>
+      </div>
     </div>
-  </header>
+  </div>
+
+  <!-- Menü katmanı -->
+  <div class="menu" id="menu" role="dialog" aria-modal="true" aria-label="Menü" hidden>
+    <button class="menu__close" type="button" data-menu-close>Kapat</button>
+    <nav class="menu__nav" aria-label="Ana menü">
+      <a href="#once-sonra">Önce ve sonra</a>
+      <a href="#fark">Fark hesabı</a>
+      <a href="#surec">Süreç</a>
+      <a href="#sorular">Sorular</a>
+      <a href="#kesif">Keşif randevusu</a>
+    </nav>
+    <p class="menu__tel"><a data-tel href="tel:+903320000000">0 (332) 000 00 00</a></p>
+  </div>
 
   <main id="icerik">
-    <!-- HERO: sayfanın tek cesur öğesi, önce/sonra ev cephesi -->
-    <section class="hero">
-      <div class="wrap hero__text">
-        <h1>Eski iki katlı eviniz, olduğundan ucuz görünüyor.</h1>
-        <div class="hero__sub">
-          <p>Konya'da yalnızca iki katlı evleri yeniliyoruz. Önce evinizi gezip bugünkü değerini, yenileme masrafını ve yenilenmiş değerini yazıyla önünüze koyuyoruz. Aradaki fark masraftan büyükse başlıyoruz. Değilse bunu da açıkça söylüyoruz.</p>
-          <div class="hero__act">
-            <a class="btn" href="#kesif">Keşif randevusu iste</a>
-            <span class="hero__note">Keşif ücretsiz, Selçuklu, Meram ve Karatay'da.</span>
-          </div>
+    <section class="lede">
+      <div class="wrap lede__grid">
+        <p class="kicker">Selçuklu, Meram, Karatay</p>
+        <p class="lede__text">Önce evinizi gezip bugünkü değerini, yenileme masrafını ve yenilenmiş değerini yazıyla önünüze koyuyoruz. Aradaki fark masraftan büyükse başlıyoruz. Değilse bunu da açıkça söylüyoruz.</p>
+      </div>
+    </section>
+
+    <!-- ÖNCE / SONRA -->
+    <section class="ba" id="once-sonra" aria-labelledby="ba-h">
+      <div class="wrap">
+        <div class="sec-head">
+          <h2 id="ba-h">Aynı ev, iki hali.</h2>
+          <p>Soba borusu, tek cam, dökülen sıva ve akan çatı bir evin fiyatını, sağlam duvarlarından daha çok belirler. Çizgiyi kaydırın.</p>
         </div>
       </div>
-
-      <figure class="compare" data-compare>
-        <span class="compare__tag compare__tag--before">Bugün</span>
-        <span class="compare__tag compare__tag--after">Yenilendikten sonra</span>
-
+      <figure class="print">
+        <div class="compare" data-compare>
+          <span class="compare__tag compare__tag--before">Bugün</span>
+          <span class="compare__tag compare__tag--after">Yenilendikten sonra</span>
         <!-- ÖNCE -->
         <svg class="compare__layer house house--before" viewBox="0 0 1200 640" aria-hidden="true">
           <defs>
@@ -66,14 +150,14 @@
           <line x1="0" y1="580" x2="1200" y2="580" class="i" stroke-width="3"/>
 
           <!-- çıplak ağaç -->
-          <g fill="none" stroke="#16294D" stroke-width="5" stroke-linecap="round">
+          <g fill="none" stroke="#2A241D" stroke-width="5" stroke-linecap="round">
             <path d="M1085 580 V455 M1085 495 L1050 452 M1085 470 L1118 425 M1085 455 L1075 405 M1118 425 L1128 398 M1050 452 L1036 430 M1075 405 L1090 380"/>
           </g>
 
           <!-- çatı -->
           <polygon points="300,232 420,130 780,130 900,232" fill="#8E6A50" class="i" stroke-width="3" stroke-linejoin="round"/>
           <path d="M391 155 H809 M361 180 H839 M332 205 H868" stroke="#6B4E3A" stroke-width="2"/>
-          <path d="M392 182 L430 182 L424 203 L384 203 Z M460 157 L494 157 L490 178 L455 178 Z M640 183 L668 183 L664 203 L636 203 Z" fill="#16294D" opacity=".75"/>
+          <path d="M392 182 L430 182 L424 203 L384 203 Z M460 157 L494 157 L490 178 L455 178 Z M640 183 L668 183 L664 203 L636 203 Z" fill="#2A241D" opacity=".75"/>
           <!-- uydu çanağı -->
           <line x1="728" y1="168" x2="728" y2="150" class="i" stroke-width="3"/>
           <ellipse cx="722" cy="144" rx="16" ry="22" transform="rotate(-28 722 144)" fill="#DADFE2" class="i" stroke-width="2.5"/>
@@ -114,7 +198,7 @@
           <path d="M560 356 H760 M560 356 V398 M760 356 V398 M576 358 V398 M592 358 V398 M608 358 V398 M624 358 V398 M640 358 V398 M656 358 L662 398 M672 358 V398 M688 358 V398 M704 358 V398 M720 358 V398 M736 358 V398" fill="none" stroke="#7A5A40" stroke-width="3"/>
 
           <!-- kablolar -->
-          <path d="M330 252 Q430 282 520 256 Q640 290 770 258 Q830 274 870 262 M548 262 Q560 340 548 462" fill="none" stroke="#16294D" stroke-width="2"/>
+          <path d="M330 252 Q430 282 520 256 Q640 290 770 258 Q830 274 870 262 M548 262 Q560 340 548 462" fill="none" stroke="#2A241D" stroke-width="2"/>
 
           <!-- zemin kat: demir parmaklıklı pencereler -->
           <g class="win-old">
@@ -159,7 +243,7 @@
               <path d="M0 27.5 H64 M0 13.75 H64 M20 0 V13.75 M52 13.75 V28" stroke="#B9C0C7" stroke-width="1.5"/>
             </pattern>
           </defs>
-          <rect width="1200" height="640" fill="#F3F5F2"/>
+          <rect width="1200" height="640" fill="#EAE3D6"/>
           <line x1="0" y1="580" x2="1200" y2="580" class="i" stroke-width="3"/>
 
           <!-- ağaç -->
@@ -170,14 +254,14 @@
           <g fill="#6A9878"><circle cx="1068" cy="430" r="18"/><circle cx="1108" cy="440" r="16"/></g>
 
           <!-- çatı -->
-          <polygon points="300,232 420,130 780,130 900,232" fill="#16294D" class="i" stroke-width="3" stroke-linejoin="round"/>
-          <path d="M391 155 H809 M361 180 H839 M332 205 H868" stroke="#31487A" stroke-width="2"/>
+          <polygon points="300,232 420,130 780,130 900,232" fill="#2A241D" class="i" stroke-width="3" stroke-linejoin="round"/>
+          <path d="M391 155 H809 M361 180 H839 M332 205 H868" stroke="#4A4034" stroke-width="2"/>
           <rect x="296" y="230" width="608" height="9" fill="#8C95A3"/>
 
           <!-- duvar, mantolamalı -->
           <rect x="325" y="236" width="550" height="344" fill="#F7F8F5" class="i" stroke-width="3"/>
           <rect x="325" y="412" width="550" height="168" fill="url(#tas)" class="i" stroke-width="3"/>
-          <rect x="321" y="400" width="558" height="12" fill="#16294D"/>
+          <rect x="321" y="400" width="558" height="12" fill="#2A241D"/>
           <rect x="881" y="239" width="9" height="339" fill="#8C95A3"/>
 
           <!-- 1. kat: ısıcam pencereler -->
@@ -187,15 +271,15 @@
             <rect x="685" y="268" width="90" height="94"/><rect x="691" y="274" width="78" height="82" class="g lit"/>
             <path d="M730 274 V356"/>
           </g>
-          <rect x="366" y="362" width="98" height="5" fill="#16294D"/>
+          <rect x="366" y="362" width="98" height="5" fill="#2A241D"/>
           <path d="M386 344 L440 284 M701 344 L755 284" stroke="#fff" stroke-width="3" opacity=".22"/>
           <!-- balkon -->
           <g class="win-new">
             <rect x="592" y="262" width="66" height="138"/><rect x="598" y="268" width="54" height="132" class="g lit"/>
           </g>
-          <rect x="555" y="396" width="210" height="16" fill="#16294D"/>
-          <rect x="560" y="354" width="200" height="42" fill="#0E8A80" fill-opacity=".16" stroke="#0E8A80" stroke-width="2"/>
-          <line x1="558" y1="352" x2="762" y2="352" stroke="#2B3440" stroke-width="4" stroke-linecap="round"/>
+          <rect x="555" y="396" width="210" height="16" fill="#2A241D"/>
+          <rect x="560" y="354" width="200" height="42" fill="#A8843F" fill-opacity=".16" stroke="#A8843F" stroke-width="2"/>
+          <line x1="558" y1="352" x2="762" y2="352" stroke="#2A241D" stroke-width="4" stroke-linecap="round"/>
 
           <!-- zemin kat -->
           <g class="win-new">
@@ -206,7 +290,7 @@
             <rect x="778" y="452" width="56" height="54"/><rect x="783" y="457" width="46" height="44" class="g"/>
           </g>
           <!-- kapı -->
-          <rect x="522" y="454" width="116" height="8" fill="#16294D"/>
+          <rect x="522" y="454" width="116" height="8" fill="#2A241D"/>
           <rect x="545" y="468" width="70" height="112" fill="#8A6246" class="i" stroke-width="2.5"/>
           <path d="M562 474 V574 M580 474 V574 M598 474 V574" stroke="#74503A" stroke-width="2"/>
           <rect x="603" y="514" width="4" height="22" fill="#D5DADE"/>
@@ -216,9 +300,9 @@
 
           <!-- bahçe duvarı -->
           <rect x="80" y="542" width="420" height="38" fill="#F7F8F5" class="i" stroke-width="2"/>
-          <rect x="76" y="535" width="428" height="8" fill="#16294D"/>
+          <rect x="76" y="535" width="428" height="8" fill="#2A241D"/>
           <rect x="660" y="542" width="460" height="38" fill="#F7F8F5" class="i" stroke-width="2"/>
-          <rect x="656" y="535" width="468" height="8" fill="#16294D"/>
+          <rect x="656" y="535" width="468" height="8" fill="#2A241D"/>
 
           <!-- notlar -->
           <g class="ann ann--after">
@@ -233,78 +317,82 @@
           </g>
         </svg>
 
-        <div class="compare__handle" aria-hidden="true"><span></span></div>
-        <input class="compare__range" type="range" min="0" max="100" value="50" step="1" aria-label="Önce ve sonra karşılaştırması: sola çekince yenilenmiş hal, sağa çekince bugünkü hal görünür">
+          <div class="compare__handle" aria-hidden="true"><span></span></div>
+          <input class="compare__range" type="range" min="0" max="100" value="50" step="1" aria-label="Önce ve sonra karşılaştırması: sola çekince yenilenmiş hal, sağa çekince bugünkü hal görünür">
+        </div>
         <figcaption class="compare__cap">
-          <span><b class="dot dot--before"></b>Bugün: soba, tek cam, dökülen sıva, akan çatı.</span>
-          <span><b class="dot dot--after"></b>Sonra: yalıtım, ısıcam, yeni çatı ve tesisat.</span>
+          <span>Bugün: soba, tek cam, dökülen sıva, akan çatı.</span>
+          <span>Sonra: yalıtım, ısıcam, yeni çatı ve tesisat.</span>
         </figcaption>
       </figure>
     </section>
 
     <!-- FARK HESABI -->
     <section class="calc" id="fark" aria-labelledby="fark-h">
-      <div class="wrap calc__grid">
-        <div class="calc__intro">
-          <h2 id="fark-h">Yenileme kendini çıkarır mı? Önce hesaplayalım.</h2>
+      <div class="wrap">
+        <div class="sec-head">
+          <h2 id="fark-h">Yenileme kendini çıkarır mı?</h2>
           <p>Konya'da yenilenmiş bir ev, aynı mahalledeki bakımsız evden daha pahalı satılır. Bu fark yenileme masrafından büyükse yenilemek kazançlıdır. Kendi evinizle deneyin.</p>
         </div>
 
-        <form class="calc__form" data-calc onsubmit="return false">
-          <fieldset>
-            <legend>Ev hangi ilçede?</legend>
-            <div class="seg" data-ilce></div>
-          </fieldset>
+        <div class="calc__grid">
+          <form class="calc__form" data-calc onsubmit="return false">
+            <fieldset>
+              <legend>Ev hangi ilçede?</legend>
+              <div class="seg" data-ilce></div>
+            </fieldset>
 
-          <div class="field">
-            <label for="alan">İki katın toplam alanı</label>
-            <div class="range">
-              <input id="alan" type="range" min="100" max="360" step="10" value="180">
-              <output for="alan" data-alan-out>180 m²</output>
+            <div class="field">
+              <label for="alan">İki katın toplam alanı</label>
+              <div class="range">
+                <input id="alan" type="range" min="100" max="360" step="10" value="180">
+                <output for="alan" data-alan-out>180 m²</output>
+              </div>
             </div>
-          </div>
 
-          <fieldset>
-            <legend>Evin bugünkü hali</legend>
-            <div class="cond" data-durum>
-              <label class="cond__opt">
-                <input type="radio" name="durum" value="bakimli">
-                <span class="cond__name">Bakımlı ama eski</span>
-                <span class="cond__desc">Çatı akmıyor, tesisat çalışıyor. Görünüş ve pencereler eski.</span>
-              </label>
-              <label class="cond__opt">
-                <input type="radio" name="durum" value="yipranmis" checked>
-                <span class="cond__name">Yıpranmış</span>
-                <span class="cond__desc">Sıva dökülüyor, pencereler tek cam, ev sobayla ısınıyor.</span>
-              </label>
-              <label class="cond__opt">
-                <input type="radio" name="durum" value="agir">
-                <span class="cond__name">Ağır yıpranmış</span>
-                <span class="cond__desc">Çatı akıyor, tesisat baştan yapılmalı, banyo ve mutfak kullanılmıyor.</span>
-              </label>
+            <fieldset>
+              <legend>Evin bugünkü hali</legend>
+              <div class="cond" data-durum>
+                <label class="cond__opt">
+                  <input type="radio" name="durum" value="bakimli">
+                  <span class="cond__name">Bakımlı ama eski</span>
+                  <span class="cond__desc">Çatı akmıyor, tesisat çalışıyor. Görünüş ve pencereler eski.</span>
+                </label>
+                <label class="cond__opt">
+                  <input type="radio" name="durum" value="yipranmis" checked>
+                  <span class="cond__name">Yıpranmış</span>
+                  <span class="cond__desc">Sıva dökülüyor, pencereler tek cam, ev sobayla ısınıyor.</span>
+                </label>
+                <label class="cond__opt">
+                  <input type="radio" name="durum" value="agir">
+                  <span class="cond__name">Ağır yıpranmış</span>
+                  <span class="cond__desc">Çatı akıyor, tesisat baştan yapılmalı, banyo ve mutfak kullanılmıyor.</span>
+                </label>
+              </div>
+            </fieldset>
+          </form>
+
+          <div class="calc__out" aria-live="polite">
+            <p class="result">
+              <span class="result__label">Fark</span>
+              <span class="result__num" data-v="fark">–</span>
+            </p>
+            <p class="result__verdict" data-verdict></p>
+
+            <div class="meter" aria-hidden="true">
+              <span class="meter__seg meter__seg--before" data-bar="bugun"></span><span class="meter__seg meter__seg--cost" data-bar="masraf"></span><span class="meter__seg meter__seg--gain" data-bar="fark"></span>
+              <span class="meter__mark" data-bar="mark"></span>
             </div>
-          </fieldset>
-        </form>
 
-        <div class="calc__out" aria-live="polite">
-          <dl class="ledger">
-            <div class="ledger__row"><dt><b class="dot dot--before"></b>Bugünkü tahmini değer</dt><dd data-v="bugun">–</dd></div>
-            <div class="ledger__row"><dt><b class="dot dot--cost"></b>Yenileme masrafı</dt><dd data-v="masraf">–</dd></div>
-            <div class="ledger__row"><dt>Yenilenmiş tahmini değer</dt><dd data-v="yeni">–</dd></div>
-          </dl>
+            <dl class="ledger">
+              <div class="ledger__row"><dt><b class="dot dot--before"></b>Bugünkü tahmini değer</dt><dd data-v="bugun">–</dd></div>
+              <div class="ledger__row"><dt><b class="dot dot--cost"></b>Yenileme masrafı</dt><dd data-v="masraf">–</dd></div>
+              <div class="ledger__row"><dt><b class="dot dot--mark"></b>Yenilenmiş tahmini değer</dt><dd data-v="yeni">–</dd></div>
+            </dl>
 
-          <div class="bar" aria-hidden="true">
-            <span class="bar__seg bar__seg--before" data-bar="bugun"></span><span class="bar__seg bar__seg--cost" data-bar="masraf"></span><span class="bar__seg bar__seg--gain" data-bar="fark"></span>
-            <span class="bar__mark" data-bar="mark"></span>
+            <a class="btn" href="#kesif">Keşif randevusu iste</a>
+            <p class="small">Bu bir ön hesaptır. İlçe m² fiyatları <span data-tarih>Eylül 2026</span> satılık konut ortalamalarından alındı (<a href="https://www.emlakjet.com/emlak-piyasasi/satilik-daire/konya" rel="noopener">emlakjet</a>). Durum oranları ve masraflar örnektir; gerçek rakamı keşifte, evin içinde çıkarırız.</p>
           </div>
-
-          <p class="result">
-            <span class="result__label">Fark</span>
-            <span class="result__num" data-v="fark">–</span>
-          </p>
-          <p class="result__verdict" data-verdict></p>
-          <a class="btn" href="#kesif">Keşif randevusu iste</a>
-          <p class="small">Bu bir ön hesaptır. İlçe m² fiyatları <span data-tarih>Eylül 2026</span> satılık konut ortalamalarından alındı (<a href="https://www.emlakjet.com/emlak-piyasasi/satilik-daire/konya" rel="noopener">emlakjet</a>). Durum oranları ve masraflar örnektir; gerçek rakamı keşifte, evin içinde çıkarırız.</p>
         </div>
       </div>
     </section>
@@ -312,7 +400,9 @@
     <!-- NEYE DOKUNUYORUZ -->
     <section class="scope" aria-labelledby="scope-h">
       <div class="wrap scope__grid">
-        <h2 id="scope-h">Bir evde neyi yeniliyoruz</h2>
+        <div class="sec-head sec-head--side">
+          <h2 id="scope-h">Bir evde neyi yeniliyoruz.</h2>
+        </div>
         <dl class="scope__list">
           <div><dt>Çatı</dt><dd>Kiremit, su yalıtımı, oluk ve iniş boruları. Akan çatıyla başka işe başlamayız.</dd></div>
           <div><dt>Dış cephe</dt><dd>Sıva onarımı, ısı yalıtımı ve boya. Yalıtım, kışın yakıt faturasında hemen görünür.</dd></div>
@@ -326,31 +416,18 @@
       </div>
     </section>
 
-    <!-- SÜREÇ: gerçek bir sıralama olduğu için numaralı -->
+    <!-- SÜREÇ: gerçek bir sıralama -->
     <section class="steps" id="surec" aria-labelledby="surec-h">
       <div class="wrap">
-        <h2 id="surec-h">Telefondan teslime kadar</h2>
+        <div class="sec-head">
+          <h2 id="surec-h">Telefondan teslime kadar.</h2>
+        </div>
         <ol class="steps__list">
-          <li>
-            <h3>Keşif</h3>
-            <p>Evi gezeriz: taşıyıcı sistem, çatı, tesisat, nem. Ücret almayız.</p>
-          </li>
-          <li>
-            <h3>Yazılı hesap</h3>
-            <p>Bugünkü değer, kalem kalem masraf ve yenilenmiş değer kâğıt üzerinde önünüzde olur.</p>
-          </li>
-          <li>
-            <h3>Sözleşme</h3>
-            <p>Yapılacak işler, süre ve ödeme planı sözleşmeye yazılır. Yazılmayan iş yapılmaz, yazılan iş atlanmaz.</p>
-          </li>
-          <li>
-            <h3>Uygulama</h3>
-            <p>Çatıdan başlar, içeride biter. İşin başında tek bir sorumlu olur ve telefonunu açar.</p>
-          </li>
-          <li>
-            <h3>Teslim</h3>
-            <p>Eksik listesini birlikte gezip kapatırız, sonra anahtarı veririz.</p>
-          </li>
+          <li><h3>Keşif</h3><p>Evi gezeriz: taşıyıcı sistem, çatı, tesisat, nem. Ücret almayız.</p></li>
+          <li><h3>Yazılı hesap</h3><p>Bugünkü değer, kalem kalem masraf ve yenilenmiş değer kâğıt üzerinde önünüzde olur.</p></li>
+          <li><h3>Sözleşme</h3><p>Yapılacak işler, süre ve ödeme planı sözleşmeye yazılır. Yazılmayan iş yapılmaz, yazılan iş atlanmaz.</p></li>
+          <li><h3>Uygulama</h3><p>Çatıdan başlar, içeride biter. İşin başında tek bir sorumlu olur ve telefonunu açar.</p></li>
+          <li><h3>Teslim</h3><p>Eksik listesini birlikte gezip kapatırız, sonra anahtarı veririz.</p></li>
         </ol>
       </div>
     </section>
@@ -358,7 +435,9 @@
     <!-- HANGİ EVLER -->
     <section class="fit" aria-labelledby="fit-h">
       <div class="wrap">
-        <h2 id="fit-h">Her eve evet demiyoruz</h2>
+        <div class="sec-head">
+          <h2 id="fit-h">Her eve evet demiyoruz.</h2>
+        </div>
         <div class="fit__cols">
           <div>
             <h3>Baktığımız evler</h3>
@@ -381,10 +460,12 @@
       </div>
     </section>
 
-    <!-- SORULAR: akordeon değil, hepsi açık -->
+    <!-- SORULAR -->
     <section class="faq" id="sorular" aria-labelledby="sorular-h">
       <div class="wrap faq__grid">
-        <h2 id="sorular-h">Sık sorulanlar</h2>
+        <div class="sec-head sec-head--side">
+          <h2 id="sorular-h">Sık sorulanlar.</h2>
+        </div>
         <div class="faq__list">
           <div class="qa">
             <h3>Keşif için para ödüyor muyum?</h3>
@@ -410,9 +491,9 @@
     <section class="cta" id="kesif" aria-labelledby="kesif-h">
       <div class="wrap cta__grid">
         <div class="cta__intro">
-          <h2 id="kesif-h">Evinizi görmeye gelelim</h2>
+          <h2 id="kesif-h">Evinizi görmeye gelelim.</h2>
           <p>Formu doldurun, WhatsApp'ta mesajınız hazır açılsın. Göndermeden önce değiştirebilirsiniz. Aynı gün içinde arayıp gün belirleriz.</p>
-          <p class="cta__tel">Ya da şimdi arayın:<br><a data-tel href="tel:+903320000000">0 (332) 000 00 00</a></p>
+          <p class="cta__tel"><span class="kicker">Ya da şimdi arayın</span><a data-tel href="tel:+903320000000">0 (332) 000 00 00</a></p>
           <p class="small" data-saat>Pazartesi–Cumartesi, 08.30–18.30</p>
         </div>
 
@@ -452,7 +533,7 @@
 
   <footer class="foot">
     <div class="wrap foot__in">
-      <p class="foot__brand">Kesit Yapı</p>
+      <p class="foot__word">Kesit Yapı</p>
       <p data-adres>Selçuklu, Konya</p>
       <p><a data-tel href="tel:+903320000000">0 (332) 000 00 00</a></p>
       <p class="small">© <span data-yil>2026</span> Kesit Yapı</p>
