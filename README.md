@@ -35,5 +35,5 @@ Birkaç dakika sonra site `https://<kullanıcı>.github.io/build_dream_home/` ad
 - [ ] Firma adı "Kesit Yapı" geçici; gerçek adla değiştirin (`index.html`, `config.js`)
 - [ ] Sözleri kontrol edin: "aynı gün ararız", "statik inceleme yaptırırız",
       "tek sorumlu" gibi cümleler ofisin gerçekten tuttuğu sözler olmalı
-- [ ] "Masrafı kim karşılıyor?" cevabını ofisin gerçek çalışma modeline göre yazın
+- [ ] Keşif sonrası verilen yazılı hesapta ev sahibinin payı ve ödeme zamanı (önden ödeme dahil) açıkça yazmalı; sitedeki "yazılı olarak önünüze koyarız" sözü buna dayanıyor
 - [ ] Gerçek projelerin önce/sonra fotoğrafları gelince bir proje bölümü ekleyin
