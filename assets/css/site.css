@@ -155,7 +155,7 @@ a:hover { color: var(--pirinc-acik); }
   padding-bottom: 6px; border-bottom: 1px solid var(--pirinc);
 }
 .hero__cta span { font-size: 1rem; letter-spacing: 0; }
-.seal { position: absolute; right: clamp(20px, 4vw, 60px); bottom: clamp(20px, 4vw, 52px); width: clamp(104px, 11vw, 150px); }
+.seal { position: absolute; right: clamp(20px, 4vw, 60px); top: clamp(16px, 3vw, 40px); width: clamp(104px, 11vw, 150px); }
 .seal svg { display: block; width: 100%; height: auto; overflow: visible; }
 .seal text { fill: var(--pirinc); }
 .seal__ring { transform-origin: 80px 80px; animation: don 48s linear infinite; }
@@ -171,7 +171,7 @@ a:hover { color: var(--pirinc-acik); }
   .hero__shade { background: linear-gradient(0deg, rgba(20,18,15,.9) 0%, rgba(20,18,15,.35) 55%, rgba(20,18,15,.55) 100%); }
   .hero__copy { top: auto; bottom: 118px; max-width: none; right: 24px; }
   .hero__cta { bottom: 52px; }
-  .seal { width: 84px; top: 84px; bottom: auto; right: 20px; }
+  .seal { width: 84px; top: 24px; right: 20px; }
 }
 
 /* ---------- Menü ---------- */

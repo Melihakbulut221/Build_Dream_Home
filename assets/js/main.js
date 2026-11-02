@@ -72,7 +72,7 @@
       var vb = narrow.matches ? "270 95 660 500" : "0 0 1200 640";
       svgs.forEach(function (s) { s.setAttribute("viewBox", vb); });
       var heroArt = document.querySelector(".hero__art");
-      if (heroArt) heroArt.setAttribute("viewBox", narrow.matches ? "600 40 640 1090" : "0 0 1200 760");
+      if (heroArt) heroArt.setAttribute("viewBox", narrow.matches ? "590 60 620 1060" : "0 0 1200 760");
     };
     fitView();
     if (narrow.addEventListener) narrow.addEventListener("change", fitView);

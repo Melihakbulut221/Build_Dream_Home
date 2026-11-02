@@ -37,5 +37,5 @@ Birkaç dakika sonra site `https://<kullanıcı>.github.io/build_dream_home/` ad
 - [ ] Sözleri kontrol edin: "aynı gün ararız", "statik inceleme yaptırırız",
       "tek sorumlu" gibi cümleler ofisin gerçekten tuttuğu sözler olmalı
 - [ ] Keşif sonrası verilen yazılı hesapta ev sahibinin payı ve ödeme zamanı (önden ödeme dahil) açıkça yazmalı; sitedeki "yazılı olarak önünüze koyarız" sözü buna dayanıyor
-- [ ] Hero görseli: gerçek bir proje fotoğrafı ya da `HERO-GORSEL.md`'deki talimatla üretilmiş görsel
+- [ ] (Sonra) İlk iş bitince akşamüstü, ışıklar yanarken evin önden fotoğrafını çekin ve hero görseli yapın; o zamana kadar hero'da çizim kalır
 - [ ] Gerçek projelerin önce/sonra fotoğrafları gelince bir proje bölümü ekleyin
