@@ -12,8 +12,8 @@ Videodaki iş akışı:
 4. Arka planı bir video modeliyle (videoda Higgsfield üzerinden Seedance 2.0) hafifçe
    hareketlendir.
 
-Bu sitede hero şu an altın çizgili bir ev çizimi gösteriyor. Görsel ya da video
-eklendiğinde çizimin yerini otomatik olarak o alır.
+Bu sitede hero şu an temsilî bir Unsplash fotoğrafı (`assets/img/hero.jpg`) gösteriyor.
+Kendi görseliniz ya da videonuz eklendiğinde onun yerini alır.
 
 ## Önce şunu okuyun
 

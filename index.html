@@ -10,7 +10,9 @@
   <meta property="og:locale" content="tr_TR">
   <meta property="og:title" content="Kesit Yapı · Konya'da iki katlı ev yenileme">
   <meta property="og:description" content="Eski iki katlı eviniz olduğundan fazlasını eder. Yenilemenin kendini çıkarıp çıkarmadığını önce birlikte hesaplayalım.">
+  <meta property="og:image" content="assets/img/hero.jpg">
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/img/hero.jpg" as="image">
   <link rel="preload" href="assets/fonts/cormorant-garamond-latin-300-italic.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/archivo-latin-wdth-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="assets/css/site.css">
@@ -18,100 +20,60 @@
 <body>
   <a class="skip" href="#icerik">İçeriğe geç</a>
 
-  <!-- HERO: çerçeveli, sinematik kart -->
+  <!-- ============ HERO: koyu panel + tam fotoğraf, çerçeveli kart ============ -->
   <div class="stage">
     <div class="frame">
-      <header class="bar">
+      <aside class="panel">
         <a class="word" href="#" aria-label="Kesit Yapı, sayfa başı">Kesit Yapı</a>
-        <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu" data-menu-open>
-          <span>Menü</span><span class="burger" aria-hidden="true"></span>
-        </button>
-      </header>
 
-      <nav class="rail" aria-label="Bölümler">
-        <a href="#once-sonra">Önce ve sonra</a>
-        <a href="#fark">Fark hesabı</a>
-        <a href="#surec">Süreç</a>
-      </nav>
-
-      <div class="hero">
-        <!-- Görsel yuvası: config.js'te heroGorsel / heroVideo verilirse burası fotoğraf/video olur.
-             Verilmezse aşağıdaki çizim gösterilir. -->
-        <div class="hero__media" data-hero-media>
-          <svg class="hero__art" viewBox="0 0 1200 760" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
-            <defs>
-              <radialGradient id="gun" cx="80%" cy="84%" r="70%">
-                <stop offset="0" stop-color="#C9A86A" stop-opacity=".42"/>
-                <stop offset=".45" stop-color="#7A5A36" stop-opacity=".16"/>
-                <stop offset="1" stop-color="#14120F" stop-opacity="0"/>
-              </radialGradient>
-              <radialGradient id="pencere" cx="50%" cy="50%" r="50%">
-                <stop offset="0" stop-color="#F1C46B" stop-opacity=".5"/>
-                <stop offset="1" stop-color="#F1C46B" stop-opacity="0"/>
-              </radialGradient>
-            </defs>
-            <rect width="1200" height="760" fill="#14120F"/>
-            <rect width="1200" height="760" fill="url(#gun)"/>
-            <circle cx="1128" cy="652" r="58" fill="#E6C27F" opacity=".5"/>
-            <path d="M0 668 Q160 628 330 650 T690 638 Q860 618 1010 642 T1200 636 V760 H0 Z" fill="#1B1814"/>
-            <path d="M0 690 H1200" stroke="#C9A86A" stroke-opacity=".5" stroke-width="1.2"/>
-
-            <g transform="translate(330 226) scale(.8)" fill="none" stroke="#C9A86A" stroke-width="1.7" stroke-linejoin="round">
-              <circle cx="415" cy="315" r="90" fill="url(#pencere)" stroke="none"/>
-              <circle cx="625" cy="330" r="110" fill="url(#pencere)" stroke="none"/>
-              <circle cx="415" cy="492" r="90" fill="url(#pencere)" stroke="none"/>
-              <polygon points="300,232 420,130 780,130 900,232" fill="#17140F"/>
-              <path d="M391 155 H809 M361 180 H839 M332 205 H868" stroke-opacity=".45"/>
-              <rect x="325" y="236" width="550" height="344" fill="#17140F"/>
-              <path d="M325 440 H875 M325 468 H875 M325 496 H875 M325 524 H875 M325 552 H875" stroke-opacity=".22"/>
-              <rect x="321" y="400" width="558" height="12"/>
-              <rect x="370" y="268" width="90" height="94" fill="#F1C46B" fill-opacity=".72"/><path d="M415 268 V362"/>
-              <rect x="685" y="268" width="90" height="94"/><path d="M730 268 V362"/>
-              <rect x="592" y="262" width="66" height="138" fill="#F1C46B" fill-opacity=".6"/>
-              <rect x="555" y="396" width="210" height="16" fill="#17140F"/>
-              <rect x="560" y="354" width="200" height="42" fill="#C9A86A" fill-opacity=".08"/>
-              <rect x="370" y="446" width="90" height="92" fill="#F1C46B" fill-opacity=".72"/><path d="M415 446 V538"/>
-              <rect x="660" y="446" width="90" height="92"/><path d="M705 446 V538"/>
-              <rect x="778" y="452" width="56" height="54"/>
-              <rect x="522" y="454" width="116" height="8"/>
-              <rect x="545" y="468" width="70" height="112" fill="#17140F"/>
-              <path d="M562 474 V574 M580 474 V574 M598 474 V574" stroke-opacity=".5"/>
-              <rect x="881" y="239" width="9" height="339"/>
-              <rect x="40" y="542" width="460" height="38" fill="#17140F"/>
-              <rect x="660" y="542" width="420" height="38" fill="#17140F"/>
-              <path d="M1000 580 V480"/>
-              <circle cx="1000" cy="446" r="44" fill="#17140F"/><circle cx="968" cy="472" r="30"/><circle cx="1032" cy="468" r="30"/>
-            </g>
-          </svg>
-        </div>
-        <div class="hero__shade" aria-hidden="true"></div>
-
-        <div class="hero__copy">
-          <h1>Eviniz, olduğundan fazlasını eder.</h1>
-          <p>Konya'da eski iki katlı evleri yeniliyoruz. Önce hesap, sonra iş.</p>
-        </div>
+        <nav class="rail" aria-label="Bölümler">
+          <a href="#hikaye">Hikâye</a>
+          <a href="#fark">Fark hesabı</a>
+          <a href="#surec">Süreç</a>
+        </nav>
 
         <div class="seal" aria-hidden="true">
           <svg viewBox="0 0 160 160">
-            <defs><path id="halka" d="M80 80 m-58 0 a58 58 0 1 1 116 0 a58 58 0 1 1 -116 0"/></defs>
-            <circle cx="80" cy="80" r="76" fill="none" stroke="#C9A86A" stroke-opacity=".6"/>
-            <circle cx="80" cy="80" r="40" fill="none" stroke="#C9A86A" stroke-opacity=".6"/>
-            <g class="seal__ring"><text><textPath href="#halka" textLength="356">İKİ KATLI EVLER · KONYA · KEŞİF ÜCRETSİZ ·</textPath></text></g>
-            <text class="seal__k" x="80" y="96" text-anchor="middle">K</text>
+            <defs><path id="halka" d="M80 80 m-60 0 a60 60 0 1 1 120 0 a60 60 0 1 1 -120 0"/></defs>
+            <circle cx="80" cy="80" r="77" fill="none" stroke="#C9A86A" stroke-opacity=".55"/>
+            <circle cx="80" cy="80" r="42" fill="none" stroke="#C9A86A" stroke-opacity=".55"/>
+            <g class="seal__ring"><text><textPath href="#halka" textLength="372">İKİ KATLI EVLER · KONYA · ÖNCE HESAP, SONRA İŞ ·</textPath></text></g>
+            <text class="seal__k" x="80" y="97" text-anchor="middle">K</text>
           </svg>
         </div>
 
-        <a class="hero__cta" href="#kesif">Keşif randevusu iste <span aria-hidden="true">↗</span></a>
+        <a class="panel__cta" href="#kesif">Keşif randevusu iste <span aria-hidden="true">↗</span></a>
+      </aside>
+
+      <div class="hero">
+        <img class="hero__img" data-hero-img src="assets/img/hero.jpg" alt="" width="2400" height="1600" fetchpriority="high">
+        <div class="hero__shade" aria-hidden="true"></div>
+
+        <header class="hero__bar">
+          <a class="word word--mobile" href="#" aria-label="Kesit Yapı, sayfa başı">Kesit Yapı</a>
+          <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu" data-menu-open>
+            <span>Menü</span><span class="burger" aria-hidden="true"></span>
+          </button>
+        </header>
+
+        <h1 class="hero__title">Eviniz,<br>olduğundan<br>fazlasını eder.</h1>
+
+        <p class="hero__foot">Selçuklu · Meram · Karatay</p>
+        <a class="hero__cta-mobile" href="#kesif">Keşif randevusu iste <span aria-hidden="true">↗</span></a>
       </div>
     </div>
   </div>
 
   <!-- Menü katmanı -->
   <div class="menu" id="menu" role="dialog" aria-modal="true" aria-label="Menü" hidden>
-    <button class="menu__close" type="button" data-menu-close>Kapat</button>
+    <div class="menu__top">
+      <span class="word">Kesit Yapı</span>
+      <button class="menu__close" type="button" data-menu-close>Kapat</button>
+    </div>
     <nav class="menu__nav" aria-label="Ana menü">
-      <a href="#once-sonra">Önce ve sonra</a>
+      <a href="#hikaye">Hikâye</a>
       <a href="#fark">Fark hesabı</a>
+      <a href="#neler">Neyi yeniliyoruz</a>
       <a href="#surec">Süreç</a>
       <a href="#sorular">Sorular</a>
       <a href="#kesif">Keşif randevusu</a>
@@ -120,214 +82,55 @@
   </div>
 
   <main id="icerik">
+
+    <!-- ============ GİRİŞ ============ -->
     <section class="lede">
       <div class="wrap lede__grid">
-        <p class="kicker">Selçuklu, Meram, Karatay</p>
-        <p class="lede__text">Önce evinizi gezip bugünkü değerini, yenileme masrafını ve yenilenmiş değerini yazıyla önünüze koyuyoruz. Aradaki fark masraftan büyükse başlıyoruz. Değilse bunu da açıkça söylüyoruz.</p>
+        <div class="lede__copy">
+          <p class="kicker">Konya'da iki katlı evler</p>
+          <p class="lede__text">Önce evinizi gezip bugünkü değerini, yenileme masrafını ve yenilenmiş değerini yazıyla önünüze koyuyoruz. Aradaki fark masraftan büyükse başlıyoruz. Değilse bunu da açıkça söylüyoruz.</p>
+        </div>
+        <figure class="lede__img">
+          <img src="assets/img/pencere.jpg" alt="Sıvalı duvara düşen akşamüstü pencere ışığı" width="1100" height="1100" loading="lazy">
+        </figure>
       </div>
     </section>
 
-    <!-- ÖNCE / SONRA -->
-    <section class="ba" id="once-sonra" aria-labelledby="ba-h">
+    <!-- ============ HİKÂYE: üç fotoğraf ============ -->
+    <section class="story" id="hikaye" aria-labelledby="hikaye-h">
       <div class="wrap">
         <div class="sec-head">
-          <h2 id="ba-h">Aynı ev, iki hali.</h2>
-          <p>Soba borusu, tek cam, dökülen sıva ve akan çatı bir evin fiyatını, sağlam duvarlarından daha çok belirler. Çizgiyi kaydırın.</p>
+          <h2 id="hikaye-h">Bir evin üç hali.</h2>
+          <p>Dökülen sıva, tek cam ve soba borusu bir evin fiyatını, sağlam duvarlarından daha çok belirler. Bunları tek tek değiştiririz.</p>
         </div>
       </div>
-      <figure class="print">
-        <div class="compare" data-compare>
-          <span class="compare__tag compare__tag--before">Bugün</span>
-          <span class="compare__tag compare__tag--after">Yenilendikten sonra</span>
-        <!-- ÖNCE -->
-        <svg class="compare__layer house house--before" viewBox="0 0 1200 640" aria-hidden="true">
-          <defs>
-            <pattern id="tugla" width="30" height="14" patternUnits="userSpaceOnUse">
-              <rect width="30" height="14" fill="#B88D6C"/>
-              <path d="M0 13.5 H30 M14 0 V7 M29 7 V14 M0 7 H30" stroke="#8E6A50" stroke-width="1.5"/>
-            </pattern>
-          </defs>
-          <line x1="0" y1="580" x2="1200" y2="580" class="i" stroke-width="3"/>
-
-          <!-- çıplak ağaç -->
-          <g fill="none" stroke="#2A241D" stroke-width="5" stroke-linecap="round">
-            <path d="M1085 580 V455 M1085 495 L1050 452 M1085 470 L1118 425 M1085 455 L1075 405 M1118 425 L1128 398 M1050 452 L1036 430 M1075 405 L1090 380"/>
-          </g>
-
-          <!-- çatı -->
-          <polygon points="300,232 420,130 780,130 900,232" fill="#8E6A50" class="i" stroke-width="3" stroke-linejoin="round"/>
-          <path d="M391 155 H809 M361 180 H839 M332 205 H868" stroke="#6B4E3A" stroke-width="2"/>
-          <path d="M392 182 L430 182 L424 203 L384 203 Z M460 157 L494 157 L490 178 L455 178 Z M640 183 L668 183 L664 203 L636 203 Z" fill="#2A241D" opacity=".75"/>
-          <!-- uydu çanağı -->
-          <line x1="728" y1="168" x2="728" y2="150" class="i" stroke-width="3"/>
-          <ellipse cx="722" cy="144" rx="16" ry="22" transform="rotate(-28 722 144)" fill="#DADFE2" class="i" stroke-width="2.5"/>
-          <!-- sarkan oluk -->
-          <path d="M298 236 Q600 262 902 236" fill="none" stroke="#6E7680" stroke-width="7" stroke-linecap="round"/>
-
-          <!-- duvar -->
-          <rect x="330" y="236" width="540" height="344" fill="#D9C3AE" class="i" stroke-width="3"/>
-          <path d="M600 245 q20 60 -4 110 M780 250 q-10 40 6 90" fill="none" stroke="#C6AD96" stroke-width="16" stroke-linecap="round" opacity=".7"/>
-          <rect x="326" y="400" width="548" height="12" fill="#C4AA92" class="i" stroke-width="2"/>
-          <!-- dökülen sıva -->
-          <path d="M512 252 L578 246 L586 296 L548 312 L516 300 Z" fill="url(#tugla)" class="i" stroke-width="1.8"/>
-          <path d="M331 300 L362 296 L370 334 L358 372 L331 378 Z" fill="url(#tugla)" class="i" stroke-width="1.8"/>
-          <path d="M772 448 L838 440 L850 498 L802 520 L766 500 Z" fill="url(#tugla)" class="i" stroke-width="1.8"/>
-          <polyline points="455,362 470,376 465,389 482,399" fill="none" class="i" stroke-width="2"/>
-          <polyline points="662,440 652,456 657,468 644,484" fill="none" class="i" stroke-width="2"/>
-
-          <!-- 1. kat pencereleri: ahşap, tek cam -->
-          <g class="win-old">
-            <rect x="375" y="275" width="80" height="86"/><rect x="383" y="283" width="64" height="70" class="g"/>
-            <path d="M415 283 V353 M383 310 H447"/>
-            <rect x="690" y="275" width="80" height="86"/><rect x="698" y="283" width="64" height="70" class="g"/>
-            <path d="M730 283 V353 M698 310 H762"/>
-          </g>
-          <rect x="370" y="361" width="90" height="7" fill="#C4AA92" class="i" stroke-width="1.5"/>
-          <!-- soba borusu pencereden çıkıyor -->
-          <rect x="428" y="305" width="19" height="26" fill="#9AA1A8"/>
-          <path d="M438 318 H500 V122" fill="none" stroke="#5E646B" stroke-width="10" stroke-linejoin="round"/>
-          <rect x="487" y="112" width="26" height="9" fill="#5E646B"/>
-          <path d="M498 104 q-10 -14 4 -26 q14 -12 2 -26" fill="none" stroke="#8C95A3" stroke-width="3" stroke-linecap="round" opacity=".7"/>
-
-          <!-- balkon -->
-          <g class="win-old">
-            <rect x="595" y="270" width="60" height="130"/><rect x="602" y="278" width="46" height="56" class="g"/>
-            <path d="M625 278 V334"/>
-          </g>
-          <rect x="555" y="398" width="210" height="14" fill="#C4AA92" class="i" stroke-width="2"/>
-          <path d="M560 356 H760 M560 356 V398 M760 356 V398 M576 358 V398 M592 358 V398 M608 358 V398 M624 358 V398 M640 358 V398 M656 358 L662 398 M672 358 V398 M688 358 V398 M704 358 V398 M720 358 V398 M736 358 V398" fill="none" stroke="#7A5A40" stroke-width="3"/>
-
-          <!-- kablolar -->
-          <path d="M330 252 Q430 282 520 256 Q640 290 770 258 Q830 274 870 262 M548 262 Q560 340 548 462" fill="none" stroke="#2A241D" stroke-width="2"/>
-
-          <!-- zemin kat: demir parmaklıklı pencereler -->
-          <g class="win-old">
-            <rect x="375" y="450" width="80" height="86"/><rect x="383" y="458" width="64" height="70" class="g"/>
-            <rect x="665" y="450" width="80" height="86"/><rect x="673" y="458" width="64" height="70" class="g"/>
-            <rect x="780" y="455" width="52" height="50"/><rect x="786" y="461" width="40" height="38" class="g"/>
-          </g>
-          <path d="M389 450 V536 M403 450 V536 M417 450 V536 M431 450 V536 M445 450 V536 M679 450 V536 M693 450 V536 M707 450 V536 M721 450 V536 M735 450 V536" stroke="#5E646B" stroke-width="3"/>
-          <!-- kapı -->
-          <rect x="530" y="458" width="100" height="6" fill="#C4AA92" class="i" stroke-width="1.5"/>
-          <rect x="545" y="470" width="70" height="110" fill="#7A5A40" class="i" stroke-width="2.5"/>
-          <rect x="554" y="480" width="52" height="38" fill="none" stroke="#5E4430" stroke-width="2"/>
-          <rect x="554" y="528" width="52" height="42" fill="none" stroke="#5E4430" stroke-width="2"/>
-          <rect x="530" y="572" width="100" height="8" fill="#C4AA92" class="i" stroke-width="1.5"/>
-
-          <!-- bahçe duvarı -->
-          <path d="M80 580 V542 L150 540 L210 545 L280 539 L360 543 L430 538 L500 542 V580 Z" fill="#CBB49E" class="i" stroke-width="2"/>
-          <path d="M660 580 V541 L740 538 L820 544 L900 539 L990 543 L1060 539 L1120 542 V580 Z" fill="#CBB49E" class="i" stroke-width="2"/>
-          <polyline points="240,545 248,558 242,568 250,580" fill="none" class="i" stroke-width="1.5"/>
-          <polyline points="940,542 932,556 940,566" fill="none" class="i" stroke-width="1.5"/>
-
-          <!-- notlar -->
-          <g class="ann ann--before">
-            <text x="282" y="168" text-anchor="end">Eksik kiremit, akan çatı</text>
-            <path d="M290 162 L400 192"/><circle cx="403" cy="193" r="5"/>
-            <text x="282" y="238" text-anchor="end">Pencereden çıkan soba borusu</text>
-            <path d="M290 232 L494 216"/><circle cx="497" cy="215" r="5"/>
-            <text x="282" y="306" text-anchor="end">Tek cam, ahşap pencere</text>
-            <path d="M290 300 L326 300 M376 300 L397 300"/><circle cx="400" cy="300" r="5"/>
-            <text x="282" y="378" text-anchor="end">Dökülen sıva</text>
-            <path d="M290 372 L345 350"/><circle cx="348" cy="349" r="5"/>
-            <text x="282" y="478" text-anchor="end">Demir parmaklık</text>
-            <path d="M290 472 L384 488"/><circle cx="387" cy="488" r="5"/>
-          </g>
-        </svg>
-
-        <!-- SONRA -->
-        <svg class="compare__layer house house--after" viewBox="0 0 1200 640" aria-hidden="true">
-          <defs>
-            <pattern id="tas" width="64" height="28" patternUnits="userSpaceOnUse">
-              <rect width="64" height="28" fill="#D5DADE"/>
-              <path d="M0 27.5 H64 M0 13.75 H64 M20 0 V13.75 M52 13.75 V28" stroke="#B9C0C7" stroke-width="1.5"/>
-            </pattern>
-          </defs>
-          <rect width="1200" height="640" fill="#EAE3D6"/>
-          <line x1="0" y1="580" x2="1200" y2="580" class="i" stroke-width="3"/>
-
-          <!-- ağaç -->
-          <path d="M1085 580 V470" stroke="#5E4430" stroke-width="9" stroke-linecap="round"/>
-          <g fill="#4F7E5E">
-            <circle cx="1085" cy="440" r="42"/><circle cx="1052" cy="462" r="30"/><circle cx="1118" cy="458" r="32"/><circle cx="1090" cy="408" r="30"/>
-          </g>
-          <g fill="#6A9878"><circle cx="1068" cy="430" r="18"/><circle cx="1108" cy="440" r="16"/></g>
-
-          <!-- çatı -->
-          <polygon points="300,232 420,130 780,130 900,232" fill="#2A241D" class="i" stroke-width="3" stroke-linejoin="round"/>
-          <path d="M391 155 H809 M361 180 H839 M332 205 H868" stroke="#4A4034" stroke-width="2"/>
-          <rect x="296" y="230" width="608" height="9" fill="#8C95A3"/>
-
-          <!-- duvar, mantolamalı -->
-          <rect x="325" y="236" width="550" height="344" fill="#F7F8F5" class="i" stroke-width="3"/>
-          <rect x="325" y="412" width="550" height="168" fill="url(#tas)" class="i" stroke-width="3"/>
-          <rect x="321" y="400" width="558" height="12" fill="#2A241D"/>
-          <rect x="881" y="239" width="9" height="339" fill="#8C95A3"/>
-
-          <!-- 1. kat: ısıcam pencereler -->
-          <g class="win-new">
-            <rect x="370" y="268" width="90" height="94"/><rect x="376" y="274" width="78" height="82" class="g"/>
-            <path d="M415 274 V356"/>
-            <rect x="685" y="268" width="90" height="94"/><rect x="691" y="274" width="78" height="82" class="g lit"/>
-            <path d="M730 274 V356"/>
-          </g>
-          <rect x="366" y="362" width="98" height="5" fill="#2A241D"/>
-          <path d="M386 344 L440 284 M701 344 L755 284" stroke="#fff" stroke-width="3" opacity=".22"/>
-          <!-- balkon -->
-          <g class="win-new">
-            <rect x="592" y="262" width="66" height="138"/><rect x="598" y="268" width="54" height="132" class="g lit"/>
-          </g>
-          <rect x="555" y="396" width="210" height="16" fill="#2A241D"/>
-          <rect x="560" y="354" width="200" height="42" fill="#A8843F" fill-opacity=".16" stroke="#A8843F" stroke-width="2"/>
-          <line x1="558" y1="352" x2="762" y2="352" stroke="#2A241D" stroke-width="4" stroke-linecap="round"/>
-
-          <!-- zemin kat -->
-          <g class="win-new">
-            <rect x="370" y="446" width="90" height="92"/><rect x="376" y="452" width="78" height="80" class="g lit"/>
-            <path d="M415 452 V532"/>
-            <rect x="660" y="446" width="90" height="92"/><rect x="666" y="452" width="78" height="80" class="g"/>
-            <path d="M705 452 V532"/>
-            <rect x="778" y="452" width="56" height="54"/><rect x="783" y="457" width="46" height="44" class="g"/>
-          </g>
-          <!-- kapı -->
-          <rect x="522" y="454" width="116" height="8" fill="#2A241D"/>
-          <rect x="545" y="468" width="70" height="112" fill="#8A6246" class="i" stroke-width="2.5"/>
-          <path d="M562 474 V574 M580 474 V574 M598 474 V574" stroke="#74503A" stroke-width="2"/>
-          <rect x="603" y="514" width="4" height="22" fill="#D5DADE"/>
-          <circle cx="632" cy="492" r="18" fill="#F1C46B" opacity=".25"/>
-          <rect x="628" y="484" width="8" height="15" fill="#F1C46B" class="i" stroke-width="1.5"/>
-          <rect x="530" y="572" width="100" height="8" fill="#D5DADE" class="i" stroke-width="1.5"/>
-
-          <!-- bahçe duvarı -->
-          <rect x="80" y="542" width="420" height="38" fill="#F7F8F5" class="i" stroke-width="2"/>
-          <rect x="76" y="535" width="428" height="8" fill="#2A241D"/>
-          <rect x="660" y="542" width="460" height="38" fill="#F7F8F5" class="i" stroke-width="2"/>
-          <rect x="656" y="535" width="468" height="8" fill="#2A241D"/>
-
-          <!-- notlar -->
-          <g class="ann ann--after">
-            <text x="918" y="150">Yeni çatı, düz oluk</text>
-            <path d="M912 144 L846 200"/><circle cx="843" cy="203" r="5"/>
-            <text x="918" y="228">Isıcam pencere</text>
-            <path d="M912 222 L766 300"/><circle cx="763" cy="301" r="5"/>
-            <text x="918" y="306">Cam korkuluklu balkon</text>
-            <path d="M912 300 L752 372"/><circle cx="749" cy="373" r="5"/>
-            <text x="918" y="384">Dış cephe yalıtımı</text>
-            <path d="M912 378 L872 330"/><circle cx="869" cy="327" r="5"/>
-          </g>
-        </svg>
-
-          <div class="compare__handle" aria-hidden="true"><span></span></div>
-          <input class="compare__range" type="range" min="0" max="100" value="50" step="1" aria-label="Önce ve sonra karşılaştırması: sola çekince yenilenmiş hal, sağa çekince bugünkü hal görünür">
-        </div>
-        <figcaption class="compare__cap">
-          <span>Bugün: soba, tek cam, dökülen sıva, akan çatı.</span>
-          <span>Sonra: yalıtım, ısıcam, yeni çatı ve tesisat.</span>
-        </figcaption>
-      </figure>
+      <ol class="story__list">
+        <li class="story__item">
+          <figure>
+            <img src="assets/img/bugun.jpg" alt="Sıvası dökülmüş eski bir duvar ve ahşap kapı" width="1400" height="933" loading="lazy">
+          </figure>
+          <h3>Bugün</h3>
+          <p>Dökülen sıva, nem lekesi, tek cam ahşap pencere, sobayla ısınan odalar.</p>
+        </li>
+        <li class="story__item">
+          <figure>
+            <img src="assets/img/yenileme.jpg" alt="Sıvası sökülmüş tuğla duvar, pencere ve iş merdiveni" width="1400" height="1050" loading="lazy">
+          </figure>
+          <h3>Yenilemede</h3>
+          <p>Sıva tuğlaya kadar sökülür, tesisat yenilenir, pencereler değişir, yalıtım yapılır.</p>
+        </li>
+        <li class="story__item">
+          <figure>
+            <img src="assets/img/sonra.jpg" alt="Sıcak lamba ışığında yenilenmiş bir oda" width="1400" height="933" loading="lazy">
+          </figure>
+          <h3>Sonra</h3>
+          <p>Sıcak, kuru, kombiyle ısınan bir ev. Ve aynı mahallede daha yüksek bir fiyat.</p>
+        </li>
+      </ol>
+      <p class="wrap small story__note">Fotoğraflar temsilîdir. Kendi işlerimizin önce ve sonra fotoğrafları yakında burada.</p>
     </section>
 
-    <!-- FARK HESABI -->
+    <!-- ============ FARK HESABI ============ -->
     <section class="calc" id="fark" aria-labelledby="fark-h">
       <div class="wrap">
         <div class="sec-head">
@@ -397,11 +200,24 @@
       </div>
     </section>
 
-    <!-- NEYE DOKUNUYORUZ -->
-    <section class="scope" aria-labelledby="scope-h">
+    <!-- ============ DEV İSİM BANDI ============ -->
+    <section class="band" aria-label="Kesit Yapı">
+      <div class="band__card">
+        <img class="band__img" src="assets/img/salon.jpg" alt="" width="2000" height="1333" loading="lazy">
+        <div class="band__shade" aria-hidden="true"></div>
+        <p class="band__word" aria-hidden="true">Kesit</p>
+        <p class="band__line">Önce hesap, sonra iş.</p>
+      </div>
+    </section>
+
+    <!-- ============ NEYİ YENİLİYORUZ ============ -->
+    <section class="scope" id="neler" aria-labelledby="scope-h">
       <div class="wrap scope__grid">
-        <div class="sec-head sec-head--side">
+        <div class="scope__side">
           <h2 id="scope-h">Bir evde neyi yeniliyoruz.</h2>
+          <figure class="scope__img">
+            <img src="assets/img/banyo.jpg" alt="Koyu tonlarda yenilenmiş bir banyo" width="1100" height="1650" loading="lazy">
+          </figure>
         </div>
         <dl class="scope__list">
           <div><dt>Çatı</dt><dd>Kiremit, su yalıtımı, oluk ve iniş boruları. Akan çatıyla başka işe başlamayız.</dd></div>
@@ -416,7 +232,7 @@
       </div>
     </section>
 
-    <!-- SÜREÇ: gerçek bir sıralama -->
+    <!-- ============ SÜREÇ ============ -->
     <section class="steps" id="surec" aria-labelledby="surec-h">
       <div class="wrap">
         <div class="sec-head">
@@ -432,7 +248,7 @@
       </div>
     </section>
 
-    <!-- HANGİ EVLER -->
+    <!-- ============ HANGİ EVLER ============ -->
     <section class="fit" aria-labelledby="fit-h">
       <div class="wrap">
         <div class="sec-head">
@@ -460,7 +276,7 @@
       </div>
     </section>
 
-    <!-- SORULAR -->
+    <!-- ============ SORULAR ============ -->
     <section class="faq" id="sorular" aria-labelledby="sorular-h">
       <div class="wrap faq__grid">
         <div class="sec-head sec-head--side">
@@ -487,55 +303,63 @@
       </div>
     </section>
 
-    <!-- KEŞİF FORMU -->
+    <!-- ============ KEŞİF ============ -->
     <section class="cta" id="kesif" aria-labelledby="kesif-h">
-      <div class="wrap cta__grid">
-        <div class="cta__intro">
+      <div class="cta__card">
+        <figure class="cta__img">
+          <img src="assets/img/ev-gece.jpg" alt="Gece pencerelerinin ışıkları yanan iki katlı bir ev" width="1800" height="1350" loading="lazy">
+        </figure>
+        <div class="cta__body">
           <h2 id="kesif-h">Evinizi görmeye gelelim.</h2>
-          <p>Formu doldurun, WhatsApp'ta mesajınız hazır açılsın. Göndermeden önce değiştirebilirsiniz. Aynı gün içinde arayıp gün belirleriz.</p>
-          <p class="cta__tel"><span class="kicker">Ya da şimdi arayın</span><a data-tel href="tel:+903320000000">0 (332) 000 00 00</a></p>
-          <p class="small" data-saat>Pazartesi–Cumartesi, 08.30–18.30</p>
-        </div>
+          <p class="cta__lead">Formu doldurun, WhatsApp'ta mesajınız hazır açılsın. Göndermeden önce değiştirebilirsiniz. Aynı gün içinde arayıp gün belirleriz.</p>
 
-        <form class="form" data-form novalidate>
-          <div class="field">
-            <label for="f-ad">Adınız</label>
-            <input id="f-ad" name="ad" autocomplete="name" required>
+          <form class="form" data-form novalidate>
+            <div class="field">
+              <label for="f-ad">Adınız</label>
+              <input id="f-ad" name="ad" autocomplete="name" required>
+            </div>
+            <div class="field">
+              <label for="f-tel">Telefonunuz</label>
+              <input id="f-tel" name="tel" type="tel" autocomplete="tel" inputmode="tel" placeholder="05xx xxx xx xx" required>
+            </div>
+            <div class="field">
+              <label for="f-yer">İlçe ve mahalle</label>
+              <input id="f-yer" name="yer" placeholder="Örneğin Meram, Yaka Mahallesi">
+            </div>
+            <div class="field">
+              <label for="f-yas">Ev kaç yaşında?</label>
+              <select id="f-yas" name="yas">
+                <option value="">Seçin</option>
+                <option>20 yıldan yeni</option>
+                <option>20–35 yıl</option>
+                <option>35 yıldan eski</option>
+                <option>Bilmiyorum</option>
+              </select>
+            </div>
+            <div class="field field--wide">
+              <label for="f-not">Eklemek istedikleriniz <span class="opt">(isteğe bağlı)</span></label>
+              <textarea id="f-not" name="not" rows="2" placeholder="Örneğin: çatı akıyor, kışın soba yakıyoruz"></textarea>
+            </div>
+            <p class="form__err" data-err role="alert" hidden></p>
+            <button class="btn" type="submit">Keşif randevusu iste</button>
+          </form>
+
+          <div class="cta__tel">
+            <span class="kicker">Ya da şimdi arayın</span>
+            <a data-tel href="tel:+903320000000">0 (332) 000 00 00</a>
+            <span class="small" data-saat>Pazartesi–Cumartesi, 08.30–18.30</span>
           </div>
-          <div class="field">
-            <label for="f-tel">Telefonunuz</label>
-            <input id="f-tel" name="tel" type="tel" autocomplete="tel" inputmode="tel" placeholder="05xx xxx xx xx" required>
-          </div>
-          <div class="field">
-            <label for="f-yer">İlçe ve mahalle</label>
-            <input id="f-yer" name="yer" placeholder="Örneğin Meram, Yaka Mahallesi">
-          </div>
-          <div class="field">
-            <label for="f-yas">Ev kaç yaşında?</label>
-            <select id="f-yas" name="yas">
-              <option value="">Seçin</option>
-              <option>20 yıldan yeni</option>
-              <option>20–35 yıl</option>
-              <option>35 yıldan eski</option>
-              <option>Bilmiyorum</option>
-            </select>
-          </div>
-          <div class="field field--wide">
-            <label for="f-not">Eklemek istedikleriniz <span class="opt">(isteğe bağlı)</span></label>
-            <textarea id="f-not" name="not" rows="3" placeholder="Örneğin: çatı akıyor, kışın soba yakıyoruz"></textarea>
-          </div>
-          <p class="form__err" data-err role="alert" hidden></p>
-          <button class="btn" type="submit">Keşif randevusu iste</button>
-        </form>
+        </div>
       </div>
     </section>
   </main>
 
   <footer class="foot">
+    <p class="foot__word" aria-hidden="true">Kesit Yapı</p>
     <div class="wrap foot__in">
-      <p class="foot__word">Kesit Yapı</p>
       <p data-adres>Selçuklu, Konya</p>
       <p><a data-tel href="tel:+903320000000">0 (332) 000 00 00</a></p>
+      <p class="small">Fotoğraflar: Unsplash, temsilî.</p>
       <p class="small">© <span data-yil>2026</span> Kesit Yapı</p>
     </div>
   </footer>

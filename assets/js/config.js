@@ -14,10 +14,10 @@ window.SITE = {
   calismaSaatleri: "Pazartesi–Cumartesi, 08.30–18.30",
 
   /*
-   * Hero görseli. Boş bırakılırsa sayfadaki altın çizgili ev çizimi görünür.
-   * Gerçek bir proje fotoğrafı ya da üretilmiş görsel eklemek için dosyayı
-   * assets/img/ altına koyup yolunu yazın. Video verilirse görsel, video
-   * yüklenene kadar kapak olarak kullanılır. (Nasıl üretilir: HERO-GORSEL.md)
+   * Hero görseli. Boş bırakılırsa assets/img/hero.jpg (temsilî Unsplash fotoğrafı)
+   * görünür. Kendi işinizin fotoğrafını eklemek için dosyayı assets/img/ altına
+   * koyup yolunu yazın. Video verilirse görsel, video yüklenene kadar kapak olarak
+   * kullanılır. (Görsel/video üretmek için: HERO-GORSEL.md)
    */
   heroGorsel: "",   // örnek: "assets/img/hero.jpg"
   heroVideo: "",    // örnek: "assets/img/hero.mp4"

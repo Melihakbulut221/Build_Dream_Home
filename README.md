@@ -7,8 +7,9 @@ düz HTML, CSS ve biraz JavaScript.
 index.html              sayfa
 assets/css/site.css     stiller
 assets/js/config.js     telefon, adres, WhatsApp, fark hesabı rakamları  ← önce burayı düzenleyin
-assets/js/main.js       önce/sonra kaydırıcısı, fark hesabı, form
-assets/fonts/           Archivo (OFL lisanslı, siteyle birlikte barındırılıyor)
+assets/js/main.js       menü, fark hesabı, form
+assets/fonts/           Archivo ve Cormorant Garamond (OFL lisanslı, siteyle birlikte)
+assets/img/             fotoğraflar (temsilî, Unsplash; kaynaklar KAYNAKLAR.md)
 DESIGN.md               tasarım sistemi ve yasak listesi
 HERO-GORSEL.md          hero görselini/videosunu üretme talimatı
 NOTLAR.md               "AI slop" videosundan çıkarılan notlar
@@ -24,10 +25,10 @@ python3 -m http.server 8000
 
 Sonra tarayıcıda `http://localhost:8000`.
 
-## Yayına almak (GitHub Pages)
+## Yayın
 
-Repo → Settings → Pages → *Deploy from a branch* → `main` / `(root)`.
-Birkaç dakika sonra site `https://<kullanıcı>.github.io/build_dream_home/` adresinde açılır.
+Site GitHub Pages'te yayında: https://melihakbulut221.github.io/Build_Dream_Home/
+`main` dalına her push bir iki dakika içinde siteye yansır.
 
 ## Yayından önce yapılacaklar
 
@@ -37,5 +38,5 @@ Birkaç dakika sonra site `https://<kullanıcı>.github.io/build_dream_home/` ad
 - [ ] Sözleri kontrol edin: "aynı gün ararız", "statik inceleme yaptırırız",
       "tek sorumlu" gibi cümleler ofisin gerçekten tuttuğu sözler olmalı
 - [ ] Keşif sonrası verilen yazılı hesapta ev sahibinin payı ve ödeme zamanı (önden ödeme dahil) açıkça yazmalı; sitedeki "yazılı olarak önünüze koyarız" sözü buna dayanıyor
-- [ ] (Sonra) İlk iş bitince akşamüstü, ışıklar yanarken evin önden fotoğrafını çekin ve hero görseli yapın; o zamana kadar hero'da çizim kalır
+- [ ] Temsilî Unsplash fotoğraflarını zamanla kendi işlerinizin fotoğraflarıyla değiştirin (aynı dosya adlarıyla, `assets/img/`)
 - [ ] Gerçek projelerin önce/sonra fotoğrafları gelince bir proje bölümü ekleyin

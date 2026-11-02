@@ -30,7 +30,6 @@ ofisine uyarladık; içerik (fark hesabı, dürüst metin) aynen kaldı.
 | Duman | `#A69D8F` | İkincil metin |
 | Firuze | `#5BB8AC` | Yalnızca kazanç (fark hesabında pozitif sonuç) |
 | Kiremit | `#D98A72` | Yalnızca zarar ve hata mesajı |
-| Kâğıt | `#EAE3D6` | Önce/sonra çiziminin zemini (çerçeveli baskı gibi) |
 
 - Pirinç dekor için değil yapı için: çerçeve, ayırıcı çizgi, etiket.
 - Firuze ve kiremit anlam taşır; başka yerde kullanılmaz.
@@ -56,10 +55,17 @@ ofisine uyarladık; içerik (fark hesabı, dürüst metin) aynen kaldı.
 
 ## Düzen
 
-- Hero: sayfa kenarından 10–22px içeride, 1px pirinç çerçeveli, köşeleri yuvarlak bir
-  kart. Solda dikey gezinme şeridi, üstte aralıklı harflerle firma adı ve "Menü".
-- Hero görseli `config.js` → `heroGorsel` / `heroVideo` ile verilir; verilmezse altın
-  çizgili ev çizimi görünür (bkz. `HERO-GORSEL.md`).
+- Hero: sayfa kenarından 10–20px içeride, 1px pirinç çerçeveli, köşeleri yuvarlak bir
+  kart. Solda koyu panel (üstte firma adı, ortada dikey gezinme, altta dönen mühür ve
+  "Keşif randevusu iste ↗"), sağda kartı dolduran sıcak ışıklı bir fotoğraf ve üzerinde
+  italik başlık. Sağ üstte "Menü".
+- Sayfa fotoğrafla ilerler: giriş metni + küçük fotoğraf, "Bir evin üç hali" (Bugün /
+  Yenilemede / Sonra), fark hesabı, fotoğraf üstünde dev "KESİT" bandı, kapsam listesi
+  + dikey fotoğraf, keşif formu + gece fotoğrafı, altta dev "KESİT YAPI".
+- Fotoğraflar sıcak ve loş olmalı: akşamüstü ışığı, lamba ışığı, gece yanan pencereler.
+  Gün ortası, soğuk ve beyaz ışıklı fotoğraf kullanmayın.
+- Şu anki fotoğraflar Unsplash'ten, temsilî (`assets/img/KAYNAKLAR.md`). Kendi işlerinizin
+  fotoğrafları geldikçe aynı dosya adlarıyla değiştirin.
 - İçerik sola hizalı, genişlik 1200px. Bölüm başlıkları solda, açıklama sağda.
 - Bölümler `Is` ve `Kül` zeminleri arasında dönüşümlü.
 - Gölge yok, gradyan yalnızca hero'daki ışıkta.
@@ -68,8 +74,7 @@ ofisine uyarladık; içerik (fark hesabı, dürüst metin) aynen kaldı.
 ## Hareket
 
 - Mühür yazısı 48 saniyede bir tur döner.
-- Önce/sonra kaydırıcısı sayfa açılışında bir kez kayar.
-- `prefers-reduced-motion` açıksa ikisi de durur, hero videosu da oynatılmaz.
+- `prefers-reduced-motion` açıksa mühür durur, hero videosu da oynatılmaz.
 
 ## Bileşenler
 
@@ -115,8 +120,8 @@ Bunlar her tadilat sitesinde var ve hiçbir şey söylemiyor:
 
 ## Gerçek içerik gelince
 
-- **Proje fotoğrafları:** aynı açıdan çekilmiş önce/sonra çiftleri. Önce/sonra
-  kaydırıcısı fotoğrafla da çalışacak şekilde genişletilebilir. İyi bir yenilenmiş ev
-  fotoğrafı hero görseli olarak da kullanılabilir.
+- **Proje fotoğrafları:** "Bir evin üç hali" bölümündeki bugun.jpg / yenileme.jpg /
+  sonra.jpg aynı evden, aynı açıdan çekilmiş fotoğraflarla değiştirilirse bölüm gerçek
+  bir önce/sonra hikâyesine dönüşür; o zaman altındaki "temsilî" notu kaldırın.
 - **Rakamlar:** `assets/js/config.js` içindeki ilçe m² fiyatları, durum katsayıları ve
   m² yenileme maliyetleri ofisin kendi rakamlarıyla güncellenmeli.

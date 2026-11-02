@@ -17,24 +17,18 @@
   var tarih = document.querySelector("[data-tarih]");
   if (tarih) tarih.textContent = S.verininTarihi;
 
-  /* ---------- Hero görseli: config'te verilirse çizimin yerini alır ---------- */
-  var media = document.querySelector("[data-hero-media]");
-  if (media && (S.heroVideo || S.heroGorsel)) {
-    var art = media.querySelector(".hero__art");
-    if (S.heroVideo && !reduceMotion) {
-      var v = document.createElement("video");
-      v.muted = true; v.loop = true; v.playsInline = true; v.autoplay = true;
-      v.setAttribute("aria-hidden", "true");
-      if (S.heroGorsel) v.poster = S.heroGorsel;
-      v.src = S.heroVideo;
-      v.addEventListener("loadeddata", function () { if (art) art.remove(); });
-      media.appendChild(v);
-    } else if (S.heroGorsel) {
-      var img = new Image();
-      img.alt = "";
-      img.onload = function () { if (art) art.remove(); media.appendChild(img); };
-      img.src = S.heroGorsel;
-    }
+  /* ---------- Hero görseli: config'te verilirse varsayılan fotoğrafın yerini alır ---------- */
+  var heroImg = document.querySelector("[data-hero-img]");
+  if (heroImg && S.heroGorsel) heroImg.src = S.heroGorsel;
+  if (heroImg && S.heroVideo && !reduceMotion) {
+    var v = document.createElement("video");
+    v.muted = true; v.loop = true; v.playsInline = true; v.autoplay = true;
+    v.setAttribute("aria-hidden", "true");
+    v.poster = heroImg.src;
+    v.src = S.heroVideo;
+    v.className = heroImg.className;
+    v.addEventListener("loadeddata", function () { heroImg.replaceWith(v); });
+    v.load();
   }
 
   /* ---------- Menü ---------- */
@@ -56,44 +50,6 @@
     menu.querySelector("[data-menu-close]").addEventListener("click", function () { kapat(true); });
     menu.querySelectorAll(".menu__nav a").forEach(function (a) { a.addEventListener("click", function () { kapat(false); }); });
     document.addEventListener("keydown", function (e) { if (e.key === "Escape" && !menu.hidden) kapat(true); });
-  }
-
-  /* ---------- Önce/sonra karşılaştırması ---------- */
-  var compare = document.querySelector("[data-compare]");
-  if (compare) {
-    var range = compare.querySelector(".compare__range");
-    var svgs = compare.querySelectorAll("svg.house");
-    var setPos = function (v) { compare.style.setProperty("--pos", v + "%"); };
-    range.addEventListener("input", function () { setPos(range.value); });
-
-    // Dar ekranda yalnızca evi göster (notlar altta liste olarak çıkıyor)
-    var narrow = window.matchMedia("(max-width: 760px)");
-    var fitView = function () {
-      var vb = narrow.matches ? "270 95 660 500" : "0 0 1200 640";
-      svgs.forEach(function (s) { s.setAttribute("viewBox", vb); });
-      var heroArt = document.querySelector(".hero__art");
-      if (heroArt) heroArt.setAttribute("viewBox", narrow.matches ? "590 60 620 1060" : "0 0 1200 760");
-    };
-    fitView();
-    if (narrow.addEventListener) narrow.addEventListener("change", fitView);
-
-    // Açılışta tek bir hareket: perde bugünden yenilenmiş hale kayar
-    if (!reduceMotion) {
-      var from = 92, to = 50, dur = 1400, t0 = null;
-      setPos(from); range.value = from;
-      var ease = function (t) { return 1 - Math.pow(1 - t, 3); };
-      var step = function (ts) {
-        if (t0 === null) t0 = ts;
-        var p = Math.min(1, (ts - t0) / dur);
-        var v = from + (to - from) * ease(p);
-        setPos(v); range.value = Math.round(v);
-        if (p < 1 && !userMoved) requestAnimationFrame(step);
-      };
-      var userMoved = false;
-      range.addEventListener("pointerdown", function () { userMoved = true; }, { once: true });
-      range.addEventListener("keydown", function () { userMoved = true; }, { once: true });
-      setTimeout(function () { requestAnimationFrame(step); }, 450);
-    }
   }
 
   /* ---------- Fark hesabı ---------- */
