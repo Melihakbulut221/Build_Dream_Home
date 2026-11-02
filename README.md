@@ -8,6 +8,7 @@ index.html              sayfa
 assets/css/site.css     stiller
 assets/js/config.js     telefon, adres, WhatsApp, fark hesabı rakamları  ← önce burayı düzenleyin
 assets/js/main.js       menü, fark hesabı, form
+assets/js/motion.js     animasyonlar (GSAP, Lenis; assets/js/vendor/ altında, lisanslar orada)
 assets/fonts/           Archivo ve Cormorant Garamond (OFL lisanslı, siteyle birlikte)
 assets/img/             fotoğraflar (temsilî, Unsplash; kaynaklar KAYNAKLAR.md)
 DESIGN.md               tasarım sistemi ve yasak listesi

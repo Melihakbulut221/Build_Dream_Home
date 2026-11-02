@@ -15,6 +15,7 @@
   <link rel="preload" href="assets/img/hero.jpg" as="image">
   <link rel="preload" href="assets/fonts/cormorant-garamond-latin-300-italic.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/archivo-latin-wdth-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/lenis.css">
   <link rel="stylesheet" href="assets/css/site.css">
 </head>
 <body>
@@ -47,6 +48,8 @@
 
       <div class="hero">
         <img class="hero__img" data-hero-img src="assets/img/hero.jpg" alt="" width="2400" height="1600" fetchpriority="high">
+        <div class="hero__glow" aria-hidden="true"></div>
+        <canvas class="hero__dust" aria-hidden="true"></canvas>
         <div class="hero__shade" aria-hidden="true"></div>
 
         <header class="hero__bar">
@@ -56,7 +59,7 @@
           </button>
         </header>
 
-        <h1 class="hero__title">Eviniz,<br>olduğundan<br>fazlasını eder.</h1>
+        <h1 class="hero__title" data-anim="hero-title">Eviniz,<br>olduğundan<br>fazlasını eder.</h1>
 
         <p class="hero__foot">Selçuklu · Meram · Karatay</p>
         <a class="hero__cta-mobile" href="#kesif">Keşif randevusu iste <span aria-hidden="true">↗</span></a>
@@ -88,39 +91,47 @@
       <div class="wrap lede__grid">
         <div class="lede__copy">
           <p class="kicker">Konya'da iki katlı evler</p>
-          <p class="lede__text">Önce evinizi gezip bugünkü değerini, yenileme masrafını ve yenilenmiş değerini yazıyla önünüze koyuyoruz. Aradaki fark masraftan büyükse başlıyoruz. Değilse bunu da açıkça söylüyoruz.</p>
+          <p class="lede__text" data-anim="words">Önce evinizi gezip bugünkü değerini, yenileme masrafını ve yenilenmiş değerini yazıyla önünüze koyuyoruz. Aradaki fark masraftan büyükse başlıyoruz. Değilse bunu da açıkça söylüyoruz.</p>
         </div>
-        <figure class="lede__img">
+        <figure class="lede__img" data-anim="img">
           <img src="assets/img/pencere.jpg" alt="Sıvalı duvara düşen akşamüstü pencere ışığı" width="1100" height="1100" loading="lazy">
         </figure>
       </div>
     </section>
 
+    <!-- ============ KAYAN YAZI ============ -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>Selçuklu</span><span>Meram</span><span>Karatay</span><span>Önce hesap, sonra iş</span><span>İki katlı evler</span>
+        <span>Selçuklu</span><span>Meram</span><span>Karatay</span><span>Önce hesap, sonra iş</span><span>İki katlı evler</span>
+      </div>
+    </div>
+
     <!-- ============ HİKÂYE: üç fotoğraf ============ -->
     <section class="story" id="hikaye" aria-labelledby="hikaye-h">
       <div class="wrap">
         <div class="sec-head">
-          <h2 id="hikaye-h">Bir evin üç hali.</h2>
+          <h2 id="hikaye-h" data-anim="lines">Bir evin üç hali.</h2>
           <p>Dökülen sıva, tek cam ve soba borusu bir evin fiyatını, sağlam duvarlarından daha çok belirler. Bunları tek tek değiştiririz.</p>
         </div>
       </div>
       <ol class="story__list">
         <li class="story__item">
-          <figure>
+          <figure data-anim="img">
             <img src="assets/img/bugun.jpg" alt="Sıvası dökülmüş eski bir duvar ve ahşap kapı" width="1400" height="933" loading="lazy">
           </figure>
           <h3>Bugün</h3>
           <p>Dökülen sıva, nem lekesi, tek cam ahşap pencere, sobayla ısınan odalar.</p>
         </li>
         <li class="story__item">
-          <figure>
+          <figure data-anim="img">
             <img src="assets/img/yenileme.jpg" alt="Sıvası sökülmüş tuğla duvar, pencere ve iş merdiveni" width="1400" height="1050" loading="lazy">
           </figure>
           <h3>Yenilemede</h3>
           <p>Sıva tuğlaya kadar sökülür, tesisat yenilenir, pencereler değişir, yalıtım yapılır.</p>
         </li>
         <li class="story__item">
-          <figure>
+          <figure data-anim="img">
             <img src="assets/img/sonra.jpg" alt="Sıcak lamba ışığında yenilenmiş bir oda" width="1400" height="933" loading="lazy">
           </figure>
           <h3>Sonra</h3>
@@ -134,7 +145,7 @@
     <section class="calc" id="fark" aria-labelledby="fark-h">
       <div class="wrap">
         <div class="sec-head">
-          <h2 id="fark-h">Yenileme kendini çıkarır mı?</h2>
+          <h2 id="fark-h" data-anim="lines">Yenileme kendini çıkarır mı?</h2>
           <p>Konya'da yenilenmiş bir ev, aynı mahalledeki bakımsız evden daha pahalı satılır. Bu fark yenileme masrafından büyükse yenilemek kazançlıdır. Kendi evinizle deneyin.</p>
         </div>
 
@@ -205,7 +216,7 @@
       <div class="band__card">
         <img class="band__img" src="assets/img/salon.jpg" alt="" width="2000" height="1333" loading="lazy">
         <div class="band__shade" aria-hidden="true"></div>
-        <p class="band__word" aria-hidden="true">Kesit</p>
+        <p class="band__word" aria-hidden="true" data-anim="chars">Kesit</p>
         <p class="band__line">Önce hesap, sonra iş.</p>
       </div>
     </section>
@@ -214,8 +225,8 @@
     <section class="scope" id="neler" aria-labelledby="scope-h">
       <div class="wrap scope__grid">
         <div class="scope__side">
-          <h2 id="scope-h">Bir evde neyi yeniliyoruz.</h2>
-          <figure class="scope__img">
+          <h2 id="scope-h" data-anim="lines">Bir evde neyi yeniliyoruz.</h2>
+          <figure class="scope__img" data-anim="img">
             <img src="assets/img/banyo.jpg" alt="Koyu tonlarda yenilenmiş bir banyo" width="1100" height="1650" loading="lazy">
           </figure>
         </div>
@@ -236,7 +247,7 @@
     <section class="steps" id="surec" aria-labelledby="surec-h">
       <div class="wrap">
         <div class="sec-head">
-          <h2 id="surec-h">Telefondan teslime kadar.</h2>
+          <h2 id="surec-h" data-anim="lines">Telefondan teslime kadar.</h2>
         </div>
         <ol class="steps__list">
           <li><h3>Keşif</h3><p>Evi gezeriz: taşıyıcı sistem, çatı, tesisat, nem. Ücret almayız.</p></li>
@@ -252,7 +263,7 @@
     <section class="fit" aria-labelledby="fit-h">
       <div class="wrap">
         <div class="sec-head">
-          <h2 id="fit-h">Her eve evet demiyoruz.</h2>
+          <h2 id="fit-h" data-anim="lines">Her eve evet demiyoruz.</h2>
         </div>
         <div class="fit__cols">
           <div>
@@ -280,7 +291,7 @@
     <section class="faq" id="sorular" aria-labelledby="sorular-h">
       <div class="wrap faq__grid">
         <div class="sec-head sec-head--side">
-          <h2 id="sorular-h">Sık sorulanlar.</h2>
+          <h2 id="sorular-h" data-anim="lines">Sık sorulanlar.</h2>
         </div>
         <div class="faq__list">
           <div class="qa">
@@ -303,14 +314,22 @@
       </div>
     </section>
 
+    <!-- ============ KAYAN YAZI 2 ============ -->
+    <div class="marquee marquee--ters" aria-hidden="true">
+      <div class="marquee__track">
+        <span>Çatı</span><span>Cephe</span><span>Isıcam</span><span>Kombi</span><span>Banyo</span><span>Mutfak</span>
+        <span>Çatı</span><span>Cephe</span><span>Isıcam</span><span>Kombi</span><span>Banyo</span><span>Mutfak</span>
+      </div>
+    </div>
+
     <!-- ============ KEŞİF ============ -->
     <section class="cta" id="kesif" aria-labelledby="kesif-h">
       <div class="cta__card">
-        <figure class="cta__img">
+        <figure class="cta__img" data-anim="img">
           <img src="assets/img/ev-gece.jpg" alt="Gece pencerelerinin ışıkları yanan iki katlı bir ev" width="1800" height="1350" loading="lazy">
         </figure>
         <div class="cta__body">
-          <h2 id="kesif-h">Evinizi görmeye gelelim.</h2>
+          <h2 id="kesif-h" data-anim="lines">Evinizi görmeye gelelim.</h2>
           <p class="cta__lead">Formu doldurun, WhatsApp'ta mesajınız hazır açılsın. Göndermeden önce değiştirebilirsiniz. Aynı gün içinde arayıp gün belirleriz.</p>
 
           <form class="form" data-form novalidate>
@@ -355,7 +374,7 @@
   </main>
 
   <footer class="foot">
-    <p class="foot__word" aria-hidden="true">Kesit Yapı</p>
+    <p class="foot__word" aria-hidden="true" data-anim="chars">Kesit Yapı</p>
     <div class="wrap foot__in">
       <p data-adres>Selçuklu, Konya</p>
       <p><a data-tel href="tel:+903320000000">0 (332) 000 00 00</a></p>
@@ -364,7 +383,12 @@
     </div>
   </footer>
 
+  <script src="assets/js/vendor/gsap.min.js"></script>
+  <script src="assets/js/vendor/ScrollTrigger.min.js"></script>
+  <script src="assets/js/vendor/SplitText.min.js"></script>
+  <script src="assets/js/vendor/lenis.min.js"></script>
   <script src="assets/js/config.js"></script>
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/motion.js"></script>
 </body>
 </html>

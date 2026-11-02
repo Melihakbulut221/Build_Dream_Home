@@ -68,6 +68,23 @@
     var tl = new Intl.NumberFormat("tr-TR", { maximumFractionDigits: 0 });
     var yuvarla = function (n) { return Math.round(n / 10000) * 10000; };
     var para = function (n) { return tl.format(yuvarla(n)) + " ₺"; };
+    // Rakamlar yeni değere sayarak gider (hareketi azalt açıksa doğrudan yazılır)
+    var say = function (el, hedef, bicim) {
+      var bas = +(el.dataset.deger || 0);
+      el.dataset.deger = hedef;
+      if (reduceMotion || bas === hedef) { el.textContent = bicim(hedef); return; }
+      var t0 = null, sure = 700;
+      if (el._raf) cancelAnimationFrame(el._raf);
+      var adim = function (ts) {
+        if (t0 === null) t0 = ts;
+        var p = Math.min(1, (ts - t0) / sure);
+        var e = 1 - Math.pow(1 - p, 4);
+        el.textContent = bicim(bas + (hedef - bas) * e);
+        if (p < 1) el._raf = requestAnimationFrame(adim);
+      };
+      el._raf = requestAnimationFrame(adim);
+    };
+    var isaretli = function (n) { var f = yuvarla(n); return (f > 0 ? "+" : f < 0 ? "−" : "") + tl.format(Math.abs(f)) + " ₺"; };
 
     var hesapla = function () {
       var ilce = S.ilceler[calc.querySelector('input[name="ilce"]:checked').value];
@@ -80,13 +97,13 @@
       var masraf = m2 * durum.maliyet;
       var fark = yeni - bugun - masraf;
 
-      out.querySelector('[data-v="bugun"]').textContent = para(bugun);
-      out.querySelector('[data-v="masraf"]').textContent = para(masraf);
-      out.querySelector('[data-v="yeni"]').textContent = para(yeni);
+      say(out.querySelector('[data-v="bugun"]'), bugun, para);
+      say(out.querySelector('[data-v="masraf"]'), masraf, para);
+      say(out.querySelector('[data-v="yeni"]'), yeni, para);
 
       var num = out.querySelector('[data-v="fark"]');
       var f = yuvarla(fark);
-      num.textContent = (f > 0 ? "+" : f < 0 ? "−" : "") + tl.format(Math.abs(f)) + " ₺";
+      say(num, fark, isaretli);
       num.classList.toggle("is-neg", f <= 0);
 
       // Çubuk: bugünkü değer + masraf (+ fark), yenilenmiş değerde işaret

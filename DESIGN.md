@@ -73,8 +73,23 @@ ofisine uyarladık; içerik (fark hesabı, dürüst metin) aynen kaldı.
 
 ## Hareket
 
-- Mühür yazısı 48 saniyede bir tur döner.
-- `prefers-reduced-motion` açıksa mühür durur, hero videosu da oynatılmaz.
+Hareket sitenin parçası; hepsi `assets/js/motion.js` içinde, GSAP + ScrollTrigger +
+SplitText ve Lenis (yumuşak kaydırma) ile. Kurallar:
+
+- **Açılış:** perde, mühür halkası çizilir, firma adı harf harf gelir; perde yukarı
+  açılır, kart büyür, hero fotoğrafı yakınlaşarak oturur, başlık satır satır yükselir.
+- **Hero hep canlı:** fotoğraf 18 saniyede bir nefes alır gibi yakınlaşıp uzaklaşır,
+  pencere ışığı titrer, ışık hüzmesinde toz zerrecikleri süzülür. Kaydırınca fotoğraf
+  yavaş, başlık hızlı kayar.
+- **Kaydırma:** bölüm başlıkları satır satır, fotoğraflar alttan perde gibi açılır,
+  giriş metni kelime kelime aydınlanır, dev "KESİT" ve altbilgi harf harf yükselir,
+  kayan yazı bantları kaydırma hızıyla hızlanır.
+- **Etkileşim:** pirinç halka imleç (fotoğrafların üstünde "Kaydır"), düğmelerde
+  mıknatıs etkisi ve dolan renk, fark hesabında rakamlar sayarak değişir.
+- Süreler uzun ve yumuşak (`expo.out`, 1–1.6 sn). Zıplayan, sallanan, dönen efekt yok
+  (mühür dışında).
+- `prefers-reduced-motion` açıksa `motion.js` hiç çalışmaz; JS yüklenmezse içerik yine
+  görünür, çünkü başlangıç halleri yalnızca JS tarafından verilir.
 
 ## Bileşenler
 
